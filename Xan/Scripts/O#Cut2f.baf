@@ -1,0 +1,12 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+MoveViewPoint([791.1145],INSTANT)
+CreateVisualEffect("spdimndr",[800.1080])
+Wait(1)
+CreateCreature("O#Ricar",[800.1080],0)
+Wait(4)
+ActionOverride("O#Ricar",StartDialogueNoSet(Player1))
+END

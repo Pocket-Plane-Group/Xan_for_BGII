@@ -1,0 +1,925 @@
+BACKUP ~Xan/Backup~
+
+AUTHOR ~http://forums.pocketplane.net~
+
+VERSION ~v18~ 
+
+README ~Xan/%LANGUAGE%/Readme-Xan.txt~ ~Xan/Readme-Xan.txt~ 
+
+ALWAYS
+  ACTION_IF NOT VARIABLE_IS_SET bg2_chapter BEGIN
+    ACTION_IF GAME_IS ~eet~ BEGIN
+      OUTER_SET bg2_chapter = 12
+    END ELSE BEGIN
+      OUTER_SET bg2_chapter = 0
+    END
+    OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+      OUTER_SET bg2_chapter = bg2_chapter + 1
+      OUTER_SPRINT name_source ~bg2_chapter_%i%~
+      OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+    END
+  END
+
+  // Borrowed from Edwin Romance: convert strings to UTF-8 for BGEE/BG2EE
+  //INCLUDE ~%MOD_FOLDER%/handle_charsets.tpa~
+
+  // No exception, everything needs to be converted
+  ACTION_DEFINE_ARRAY O#noconvert BEGIN END
+
+  // Only setup-Xan.tra needs to be reloaded
+  ACTION_DEFINE_ARRAY O#reload BEGIN Setup-Xan END
+
+  // There is no "language" folder so the root of all languages in %MOD_FOLDER%
+  LAF HANDLE_CHARSETS
+    INT_VAR
+      infer_charsets = 1
+    STR_VAR
+      tra_path = EVAL ~%MOD_FOLDER%~
+      // charset_table = O#charsets // Included for illustrative purposes.
+      noconvert_array = O#noconvert
+      reload_array = O#reload
+  END
+END
+
+AUTO_TRA ~Xan/%s~
+
+LANGUAGE ~English~ ~English~ ~Xan/English/Setup-Xan.tra~
+LANGUAGE ~Russian~ ~Russian~ ~Xan/Russian/Setup-Xan.tra~
+LANGUAGE ~Polish (Translated by Magda Buller)~ ~Polish~ ~Xan/Polish/Setup-Xan.tra~
+LANGUAGE ~French (Translated by Eleima)~ ~French~ ~Xan/French/Setup-Xan.tra~
+
+BEGIN @0
+
+ACTION_IF GAME_IS ~BG2EE eet~ BEGIN
+LOAD_TRA ~Xan/%LANGUAGE%/Setup-Xan-EE.tra~
+ADD_JOURNAL @3612 @3613 @3614 @3615 @3616 @3617 @3618 @3619 @3620 USING ~Xan/%LANGUAGE%/O#XanJ.tra~ 
+ADD_JOURNAL @3900 @3901 @3902 @3903 @3904 @3905 @3906 @3907 @3908 USING ~Xan/%LANGUAGE%/O#XanJ.tra~ 
+ADD_JOURNAL @5110 @5111 @5112 @5113 @5114 @5115 USING ~Xan/%LANGUAGE%/O#XanJ.tra~ 
+END
+
+COPY ~Xan/Areas~ ~override~
+
+COPY ~Xan/Music~ ~music~
+
+COPY_EXISTING ~songlist.2da~ ~override~
+  SET_2DA_ENTRY 0 2 3 ~blank.mus~
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+COPY ~Xan/Characters/O#Xan09.cre~ ~override/O#Xan09.cre~
+SAY NAME1 @1
+SAY NAME2 @1
+SAY INITIAL_MEETING @2
+SAY MORALE @3
+SAY HAPPY @4
+SAY UNHAPPY_ANNOYED @5
+SAY UNHAPPY_SERIOUS @6
+SAY UNHAPPY_BREAKING @7
+SAY LEADER @8
+SAY TIRED @9
+SAY BORED @10
+SAY BATTLE_CRY1 @11
+SAY BATTLE_CRY2 @12
+SAY BATTLE_CRY3 @13
+SAY BATTLE_CRY4 @14
+SAY BATTLE_CRY5 @15
+SAY DAMAGE @16
+SAY DYING @17
+SAY HURT @18
+SAY AREA_FOREST @19
+SAY AREA_CITY @20
+SAY AREA_DUNGEON @21
+SAY AREA_DAY @22
+SAY AREA_NIGHT @23
+SAY SELECT_COMMON1 @24
+SAY SELECT_COMMON2 @25
+SAY SELECT_COMMON3 @26
+SAY SELECT_COMMON4 @27
+SAY SELECT_COMMON5 @28
+SAY SELECT_COMMON6 @29
+SAY SELECT_ACTION1 @30
+SAY SELECT_ACTION2 @31
+SAY SELECT_ACTION3 @32
+SAY SELECT_ACTION4 @33
+SAY SELECT_ACTION5 @34
+SAY SELECT_ACTION6 @35
+SAY SELECT_ACTION7 @36
+SAY SELECT_RARE1 @37
+SAY SELECT_RARE2 @38
+SAY CRITICAL_HIT @39
+SAY CRITICAL_MISS @40
+SAY TARGET_IMMUNE @41
+SAY INVENTORY_FULL @42
+SAY SPELL_DISRUPTED @43
+SAY BIO @44
+
+COPY ~Xan/Characters/O#Taira.cre~ ~override/O#Taira.cre~
+SAY NAME1 @57
+SAY NAME2 @57
+
+COPY ~Xan/Characters/O#Selia.cre~ ~override/O#Selia.cre~
+SAY NAME1 @58
+SAY NAME2 @58
+
+COPY ~Xan/Characters/O#Rotan.cre~ ~override/O#Rotan.cre~
+SAY NAME1 @59
+SAY NAME2 @59
+
+COPY ~Xan/Characters/O#Azag.cre~ ~override/O#Azag.cre~
+SAY NAME1 @60
+SAY NAME2 @60
+
+COPY ~Xan/Characters/O#Botan.cre~ ~override/O#Botan.cre~
+SAY NAME1 @61
+SAY NAME2 @61
+
+COPY ~Xan/Characters/O#Dur.cre~ ~override/O#Dur.cre~
+SAY NAME1 @62
+SAY NAME2 @62
+
+COPY ~Xan/Characters/O#Eligor.cre~ ~override/O#Eligor.cre~
+SAY NAME1 @63
+SAY NAME2 @63
+
+COPY ~Xan/Characters/O#DrowF.cre~ ~override/O#DrowF.cre~
+SAY NAME1 @69
+SAY NAME2 @69
+
+COPY ~Xan/Characters/O#Ricar.cre~ ~override/O#Ricar.cre~
+SAY NAME1 @70
+SAY NAME2 @70
+
+COPY ~Xan/Characters/O#DrowM.cre~ ~override/O#DrowM.cre~
+SAY NAME1 @71
+SAY NAME2 @71
+
+COPY ~Xan/Characters/O#Clone.cre~ ~override/O#Clone.cre~
+SAY NAME1 @72
+SAY NAME2 @72
+
+COPY ~Xan/Characters/O#MercD.cre~ ~override/O#MercD.cre~
+
+COPY ~Xan/Characters/O#Aegnor.cre~ ~override/O#Aegnor.cre~
+SAY NAME1 @79
+SAY NAME2 @79
+
+COPY ~Xan/Characters/O#Hiel.cre~ ~override/O#Hiel.cre~
+SAY NAME1 @80
+SAY NAME2 @80
+
+COPY ~Xan/Characters/O#Naiz.cre~ ~override/O#Naiz.cre~
+SAY NAME1 @81
+SAY NAME2 @81
+
+COPY ~Xan/Characters/O#Verell.cre~ ~override/O#Verell.cre~
+SAY NAME1 @82
+SAY NAME2 @82
+
+COPY ~Xan/Items/O#XanJR.itm~ ~override/O#XanJR.itm~
+SAY NAME1 @73
+SAY NAME2 @73
+SAY UNIDENTIFIED_DESC @74
+SAY DESC @74
+
+COPY ~Xan/Items/O#XanDB.itm~ ~override/O#XanDB.itm~
+SAY DESC @46
+
+COPY ~Xan/Items/O#XanMB.itm~ ~override/O#XanMB.itm~
+COPY ~Xan/Items/O#XanMS.itm~ ~override/O#XanMS.itm~
+
+COPY ~Xan/Items/O#XanIMB.itm~ ~override/O#XanIMB.itm~
+SAY NAME1 @85
+SAY NAME2 @85
+SAY DESC @76
+
+COPY ~Xan/Items/O#XanIMS.itm~ ~override/O#XanIMS.itm~
+SAY NAME1 @85
+SAY NAME2 @85
+SAY DESC @77
+
+COMPILE EVALUATE_BUFFER ~Xan/Dialogue/BO#Xan.d~
+	~Xan/Dialogue/O#Xan.d~
+	~Xan/Dialogue/O#XanJ.d~
+	~Xan/Dialogue/O#XanP.d~
+
+	~Xan/Scripts/O#XanD.baf~
+	~Xan/Scripts/O#XanF1.baf~
+	~Xan/Scripts/O#XanF2.baf~
+	~Xan/Scripts/O#XanM.baf~
+	~Xan/Scripts/O#XanM1.baf~
+	~Xan/Scripts/O#XanS.baf~
+	~Xan/Scripts/O#Group.baf~
+	~Xan/Scripts/O#Ricar.baf~
+	~Xan/Scripts/O#Selia.baf~
+	~Xan/Scripts/O#Taira.baf~
+	~Xan/Scripts/O#DrowF.baf~
+	~Xan/Scripts/O#Cut2a.baf~
+	~Xan/Scripts/O#Cut2b.baf~
+	~Xan/Scripts/O#Cut2c.baf~
+	~Xan/Scripts/O#Cut2d.baf~
+	~Xan/Scripts/O#Cut2e.baf~
+	~Xan/Scripts/O#Cut2f.baf~
+	~Xan/Scripts/O#Cut2g.baf~
+	~Xan/Scripts/O#Cut2h.baf~
+	~Xan/Scripts/O#XanMB.baf~
+	~Xan/Scripts/O#XanMS.baf~
+	~Xan/Scripts/O#Drm6a.baf~
+	~Xan/Scripts/O#Drm6b.baf~
+	~Xan/Scripts/O#Drm7a.baf~
+
+EXTEND_TOP ~AR0400.bcs~ ~Xan/Scripts/AR0400.baf~
+EXTEND_TOP ~AR0406.bcs~ ~Xan/Scripts/AR0406.baf~
+EXTEND_TOP ~AR0800.bcs~ ~Xan/Scripts/AR0800.baf~
+EXTEND_TOP ~AR0900.bcs~ ~Xan/Scripts/AR0900.baf~
+EXTEND_TOP ~AR0902.bcs~ ~Xan/Scripts/AR0902.baf~
+EXTEND_TOP ~AR0904.bcs~ ~Xan/Scripts/AR0904.baf~
+EXTEND_TOP ~AR1000.bcs~ ~Xan/Scripts/AR1000.baf~
+EXTEND_TOP ~AR1800.bcs~ ~Xan/Scripts/AR1800.baf~
+EXTEND_TOP ~AR2203.bcs~ ~Xan/Scripts/AR2203.baf~
+EXTEND_TOP ~AR2500.bcs~ ~Xan/Scripts/AR2500.baf~
+EXTEND_TOP ~Baldur.bcs~ ~Xan/Scripts/Baldur.baf~ EVALUATE_BUFFER
+
+ACTION_IF GAME_INCLUDES ~tob~ THEN BEGIN
+
+ACTION_IF GAME_IS ~BG2EE eet~ BEGIN
+ADD_JOURNAL @1509 @1510 @1511 @1512 @1513 @1514 @1515 @1516 @1517 @1518 @1519 @1520 @1521 @1522 @1523 @4289 USING ~Xan/%LANGUAGE%/O#Xan25J.tra~ 
+END
+
+COPY ~Xan/Characters/O#Xan25.cre~ ~override/O#Xan25.cre~
+SAY NAME1 @1
+SAY NAME2 @1
+SAY INITIAL_MEETING @2
+SAY MORALE @3
+SAY HAPPY @4
+SAY UNHAPPY_ANNOYED @5
+SAY UNHAPPY_SERIOUS @6
+SAY UNHAPPY_BREAKING @7
+SAY LEADER @8
+SAY TIRED @9
+SAY BORED @10
+SAY BATTLE_CRY1 @11
+SAY BATTLE_CRY2 @12
+SAY BATTLE_CRY3 @13
+SAY BATTLE_CRY4 @14
+SAY BATTLE_CRY5 @15
+SAY DAMAGE @16
+SAY DYING @17
+SAY HURT @18
+SAY AREA_FOREST @19
+SAY AREA_CITY @20
+SAY AREA_DUNGEON @21
+SAY AREA_DAY @22
+SAY AREA_NIGHT @23
+SAY SELECT_COMMON1 @24
+SAY SELECT_COMMON2 @25
+SAY SELECT_COMMON3 @26
+SAY SELECT_COMMON4 @27
+SAY SELECT_COMMON5 @28
+SAY SELECT_COMMON6 @29
+SAY SELECT_ACTION1 @30
+SAY SELECT_ACTION2 @31
+SAY SELECT_ACTION3 @32
+SAY SELECT_ACTION4 @33
+SAY SELECT_ACTION5 @34
+SAY SELECT_ACTION6 @35
+SAY SELECT_ACTION7 @36
+SAY SELECT_RARE1 @37
+SAY SELECT_RARE2 @38
+SAY CRITICAL_HIT @39
+SAY CRITICAL_MISS @40
+SAY TARGET_IMMUNE @41
+SAY INVENTORY_FULL @42
+SAY SPELL_DISRUPTED @43
+SAY BIO @55
+
+COPY ~Xan/Characters/O#Spir1.cre~  ~override/O#Spir1.cre~
+COPY ~Xan/Characters/O#Spir2.cre~  ~override/O#Spir2.cre~
+COPY ~Xan/Characters/O#Spir3.cre~  ~override/O#Spir3.cre~
+COPY ~Xan/Characters/O#Merc.cre~   ~override/O#Merc.cre~
+COPY ~Xan/Characters/O#Merc1.cre~  ~override/O#Merc1.cre~
+COPY ~Xan/Characters/O#Merc2.cre~  ~override/O#Merc2.cre~
+COPY ~Xan/Characters/O#Khalid.cre~ ~override/O#Khalid.cre~
+
+COPY ~Xan/Characters/O#Siene.cre~ ~override/O#Siene.cre~
+SAY NAME1 @64
+SAY NAME2 @64
+
+COPY ~Xan/Characters/O#Ezara.cre~ ~override/O#Ezara.cre~
+SAY NAME1 @65
+SAY NAME2 @65
+
+COPY ~Xan/Characters/O#Nailyn.cre~ ~override/O#Nailyn.cre~
+SAY NAME1 @66
+SAY NAME2 @66
+
+COPY ~Xan/Characters/O#Ruavel.cre~ ~override/O#Ruavel.cre~
+SAY NAME1 @67
+SAY NAME2 @67
+
+COPY ~Xan/Characters/O#Vel.cre~ ~override/O#Vel.cre~
+SAY NAME1 @68
+SAY NAME2 @68
+
+COMPILE EVALUATE_BUFFER ~Xan/Dialogue/BO#Xan25.d~
+	~Xan/Dialogue/O#Xan25.d~
+	~Xan/Dialogue/O#Xan25J.d~
+
+	~Xan/Scripts/O#Xan25S.baf~
+	~Xan/Scripts/O#Xan25D.baf~
+	~Xan/Scripts/O#XanF3.baf~
+	~Xan/Scripts/O#Spir1.baf~
+	~Xan/Scripts/O#Spir2.baf~
+	~Xan/Scripts/O#Spir3.baf~
+	~Xan/Scripts/O#Cut1a.baf~
+	~Xan/Scripts/O#Cut1b.baf~
+	~Xan/Scripts/O#Cut1c.baf~
+	~Xan/Scripts/O#Cut1d.baf~
+	~Xan/Scripts/O#Drm1a.baf~
+	~Xan/Scripts/O#Drm1b.baf~
+	~Xan/Scripts/O#Drm2a.baf~
+	~Xan/Scripts/O#Drm2b.baf~
+	~Xan/Scripts/O#Drm2c.baf~
+	~Xan/Scripts/O#Drm3a.baf~
+	~Xan/Scripts/O#Drm4a.baf~
+	~Xan/Scripts/O#Drm4b.baf~
+	~Xan/Scripts/O#Drm5a.baf~
+	~Xan/Scripts/O#Siene.baf~
+	~Xan/Scripts/O#Khalid.baf~
+	~Xan/Scripts/O#Group2.baf~
+
+/* one j.dlg for all of EET - make Xan realize he's not in hell anymore */
+ACTION_IF GAME_IS ~eet~ THEN BEGIN
+  EXTEND_TOP ~O#Xan25S.bcs~   ~Xan/Scripts/O#Xan25S_eet.baf~ EVALUATE_BUFFER
+END
+
+COMPILE	~Xan/Dialogue/O#Xan25P.d~ USING ~Xan/%LANGUAGE%/O#Xan25P.tra~ 
+					~Xan/%LANGUAGE%/O#Xan25J.tra~ 
+
+EXTEND_TOP ~AR5500.bcs~   ~Xan/Scripts/AR5500.baf~
+EXTEND_TOP ~AR6200.bcs~   ~Xan/Scripts/AR6200.baf~
+EXTEND_TOP ~Baldur25.bcs~ ~Xan/Scripts/Baldur25.baf~
+EXTEND_TOP ~Cut218g.bcs~  ~Xan/Scripts/Cut218g.baf~
+EXTEND_TOP ~Player1d.bcs~ ~Xan/Scripts/Player1d.baf~
+EXTEND_TOP ~Valy25.bcs~   ~Xan/Scripts/O#Xan25V.baf~ EVALUATE_BUFFER
+
+ACTION_IF GAME_IS ~BG2EE eet~ BEGIN
+COMPILE	~Xan/Dialogue/XanEE.d~
+END
+
+COPY ~Xan/Epilogue/O#Xanzz.2da~ ~override/O#Xan01.2da~
+REPLACE ~99999~ @52
+COPY ~Xan/Epilogue/O#Xanzz.2da~ ~override/O#Xan02.2da~
+REPLACE ~99999~ @53
+COPY ~Xan/Epilogue/O#Xanzz.2da~ ~override/O#Xan03.2da~
+REPLACE ~99999~ @54
+COPY ~Xan/Epilogue/O#Xanzz.2da~ ~override/O#Xan04.2da~
+REPLACE ~99999~ @75
+COPY ~Xan/Epilogue/O#Xanzz.2da~ ~override/O#Xan05.2da~
+REPLACE ~99999~ @83
+COPY ~Xan/Epilogue/O#Xanzz.2da~ ~override/O#Xan06.2da~
+REPLACE ~99999~ @84
+
+END
+
+APPEND ~interdia.2da~ ~O#XAN       BO#XAN       BO#XAN25~
+UNLESS ~O#XAN~
+
+APPEND ~pdialog.2da~ ~O#XAN        O#XANP             O#XANJ            O#XAND             O#XAN25P             O#XAN25J             O#XAN25D       O#XAN25S~
+UNLESS ~O#XAN~
+
+LAF HANDLE_AUDIO END
+
+ACTION_IF GAME_IS ~eet~ BEGIN
+  INCLUDE ~EET/other/EET_functions.tph~
+  LAF ~EET_NPC_TRANSITION~
+    INT_VAR
+      type = 2
+      default_ToB = 1
+      clean_ToB = 1
+    STR_VAR
+      dv = "O#XAN"
+      override_SoA = "O#XANS"
+      override_ToB = "O#XAN25S"
+      dialog_ToB = "O#XAN25"
+      cre_ToB = "O#Xan25"
+      traFile = EVAL "Xan/%LANGUAGE%/O#Xan25J.tra"
+      string = "@34" //Bring me Xan, the elven mage.
+      stringPosDV = "Xzar"
+      clean_ToB_DV = "Xan"
+  END
+END ELSE BEGIN
+  COMPILE ~Xan/Dialogue/FATESP.d~ USING ~Xan/%LANGUAGE%/O#Xan25J.tra~
+END
+
+BEGIN @48
+SUBCOMPONENT @47
+REQUIRE_COMPONENT ~xan.tp2~ ~0~ @88
+
+COPY ~Xan/Characters/O#XanF9.cre~ ~override/O#Xan09.cre~
+SAY NAME1 @1
+SAY NAME2 @1
+SAY INITIAL_MEETING @2
+SAY MORALE @3
+SAY HAPPY @4
+SAY UNHAPPY_ANNOYED @5
+SAY UNHAPPY_SERIOUS @6
+SAY UNHAPPY_BREAKING @7
+SAY LEADER @8
+SAY TIRED @9
+SAY BORED @10
+SAY BATTLE_CRY1 @11
+SAY BATTLE_CRY2 @12
+SAY BATTLE_CRY3 @13
+SAY BATTLE_CRY4 @14
+SAY BATTLE_CRY5 @15
+SAY DAMAGE @16
+SAY DYING @17
+SAY HURT @18
+SAY AREA_FOREST @19
+SAY AREA_CITY @20
+SAY AREA_DUNGEON @21
+SAY AREA_DAY @22
+SAY AREA_NIGHT @23
+SAY SELECT_COMMON1 @24
+SAY SELECT_COMMON2 @25
+SAY SELECT_COMMON3 @26
+SAY SELECT_COMMON4 @27
+SAY SELECT_COMMON5 @28
+SAY SELECT_COMMON6 @29
+SAY SELECT_ACTION1 @30
+SAY SELECT_ACTION2 @31
+SAY SELECT_ACTION3 @32
+SAY SELECT_ACTION4 @33
+SAY SELECT_ACTION5 @34
+SAY SELECT_ACTION6 @35
+SAY SELECT_ACTION7 @36
+SAY SELECT_RARE1 @37
+SAY SELECT_RARE2 @38
+SAY CRITICAL_HIT @39
+SAY CRITICAL_MISS @40
+SAY TARGET_IMMUNE @41
+SAY INVENTORY_FULL @42
+SAY SPELL_DISRUPTED @43
+SAY BIO @44
+
+ACTION_IF GAME_INCLUDES ~tob~ THEN BEGIN
+COPY ~Xan/Characters/O#Xan25F.cre~ ~override/O#Xan25.cre~
+SAY NAME1 @1
+SAY NAME2 @17
+SAY INITIAL_MEETING @2
+SAY MORALE @3
+SAY HAPPY @4
+SAY UNHAPPY_ANNOYED @5
+SAY UNHAPPY_SERIOUS @6
+SAY UNHAPPY_BREAKING @7
+SAY LEADER @8
+SAY TIRED @9
+SAY BORED @10
+SAY BATTLE_CRY1 @11
+SAY BATTLE_CRY2 @12
+SAY BATTLE_CRY3 @13
+SAY BATTLE_CRY4 @14
+SAY BATTLE_CRY5 @15
+SAY DAMAGE @16
+SAY DYING @17
+SAY HURT @18
+SAY AREA_FOREST @19
+SAY AREA_CITY @20
+SAY AREA_DUNGEON @21
+SAY AREA_DAY @22
+SAY AREA_NIGHT @23
+SAY SELECT_COMMON1 @24
+SAY SELECT_COMMON2 @25
+SAY SELECT_COMMON3 @26
+SAY SELECT_COMMON4 @27
+SAY SELECT_COMMON5 @28
+SAY SELECT_COMMON6 @29
+SAY SELECT_ACTION1 @30
+SAY SELECT_ACTION2 @31
+SAY SELECT_ACTION3 @32
+SAY SELECT_ACTION4 @33
+SAY SELECT_ACTION5 @34
+SAY SELECT_ACTION6 @35
+SAY SELECT_ACTION7 @36
+SAY SELECT_RARE1 @37
+SAY SELECT_RARE2 @38
+SAY CRITICAL_HIT @39
+SAY CRITICAL_MISS @40
+SAY TARGET_IMMUNE @41
+SAY INVENTORY_FULL @42
+SAY SPELL_DISRUPTED @43
+SAY BIO @55
+END
+
+BEGIN @49
+SUBCOMPONENT @47
+REQUIRE_COMPONENT ~xan.tp2~ ~0~ @88
+
+COPY ~Xan/Characters/O#XanM9.cre~ ~override/O#Xan09.cre~
+SAY NAME1 @1
+SAY NAME2 @1
+SAY INITIAL_MEETING @2
+SAY MORALE @3
+SAY HAPPY @4
+SAY UNHAPPY_ANNOYED @5
+SAY UNHAPPY_SERIOUS @6
+SAY UNHAPPY_BREAKING @7
+SAY LEADER @8
+SAY TIRED @9
+SAY BORED @10
+SAY BATTLE_CRY1 @11
+SAY BATTLE_CRY2 @12
+SAY BATTLE_CRY3 @13
+SAY BATTLE_CRY4 @14
+SAY BATTLE_CRY5 @15
+SAY DAMAGE @16
+SAY DYING @17
+SAY HURT @18
+SAY AREA_FOREST @19
+SAY AREA_CITY @20
+SAY AREA_DUNGEON @21
+SAY AREA_DAY @22
+SAY AREA_NIGHT @23
+SAY SELECT_COMMON1 @24
+SAY SELECT_COMMON2 @25
+SAY SELECT_COMMON3 @26
+SAY SELECT_COMMON4 @27
+SAY SELECT_COMMON5 @28
+SAY SELECT_COMMON6 @29
+SAY SELECT_ACTION1 @30
+SAY SELECT_ACTION2 @31
+SAY SELECT_ACTION3 @32
+SAY SELECT_ACTION4 @33
+SAY SELECT_ACTION5 @34
+SAY SELECT_ACTION6 @35
+SAY SELECT_ACTION7 @36
+SAY SELECT_RARE1 @37
+SAY SELECT_RARE2 @38
+SAY CRITICAL_HIT @39
+SAY CRITICAL_MISS @40
+SAY TARGET_IMMUNE @41
+SAY INVENTORY_FULL @42
+SAY SPELL_DISRUPTED @43
+SAY BIO @44
+
+ACTION_IF GAME_INCLUDES ~tob~ THEN BEGIN
+COPY ~Xan/Characters/O#Xan25M.cre~ ~override/O#Xan25.cre~
+SAY NAME1 @1
+SAY NAME2 @1
+SAY INITIAL_MEETING @2
+SAY MORALE @3
+SAY HAPPY @4
+SAY UNHAPPY_ANNOYED @5
+SAY UNHAPPY_SERIOUS @6
+SAY UNHAPPY_BREAKING @7
+SAY LEADER @8
+SAY TIRED @9
+SAY BORED @10
+SAY BATTLE_CRY1 @11
+SAY BATTLE_CRY2 @12
+SAY BATTLE_CRY3 @13
+SAY BATTLE_CRY4 @14
+SAY BATTLE_CRY5 @15
+SAY DAMAGE @16
+SAY DYING @17
+SAY HURT @18
+SAY AREA_FOREST @19
+SAY AREA_CITY @20
+SAY AREA_DUNGEON @21
+SAY AREA_DAY @22
+SAY AREA_NIGHT @23
+SAY SELECT_COMMON1 @24
+SAY SELECT_COMMON2 @25
+SAY SELECT_COMMON3 @26
+SAY SELECT_COMMON4 @27
+SAY SELECT_COMMON5 @28
+SAY SELECT_COMMON6 @29
+SAY SELECT_ACTION1 @30
+SAY SELECT_ACTION2 @31
+SAY SELECT_ACTION3 @32
+SAY SELECT_ACTION4 @33
+SAY SELECT_ACTION5 @34
+SAY SELECT_ACTION6 @35
+SAY SELECT_ACTION7 @36
+SAY SELECT_RARE1 @37
+SAY SELECT_RARE2 @38
+SAY CRITICAL_HIT @39
+SAY CRITICAL_MISS @40
+SAY TARGET_IMMUNE @41
+SAY INVENTORY_FULL @42
+SAY SPELL_DISRUPTED @43
+SAY BIO @55
+END
+
+BEGIN @50
+SUBCOMPONENT @47
+REQUIRE_COMPONENT ~xan.tp2~ ~0~ @88
+
+COPY ~Xan/Characters/O#XanS9.cre~ ~override/O#Xan09.cre~
+SAY NAME1 @1
+SAY NAME2 @1
+SAY INITIAL_MEETING @2
+SAY MORALE @3
+SAY HAPPY @4
+SAY UNHAPPY_ANNOYED @5
+SAY UNHAPPY_SERIOUS @6
+SAY UNHAPPY_BREAKING @7
+SAY LEADER @8
+SAY TIRED @9
+SAY BORED @10
+SAY BATTLE_CRY1 @11
+SAY BATTLE_CRY2 @12
+SAY BATTLE_CRY3 @13
+SAY BATTLE_CRY4 @14
+SAY BATTLE_CRY5 @15
+SAY DAMAGE @16
+SAY DYING @17
+SAY HURT @18
+SAY AREA_FOREST @19
+SAY AREA_CITY @20
+SAY AREA_DUNGEON @21
+SAY AREA_DAY @22
+SAY AREA_NIGHT @23
+SAY SELECT_COMMON1 @24
+SAY SELECT_COMMON2 @25
+SAY SELECT_COMMON3 @26
+SAY SELECT_COMMON4 @27
+SAY SELECT_COMMON5 @28
+SAY SELECT_COMMON6 @29
+SAY SELECT_ACTION1 @30
+SAY SELECT_ACTION2 @31
+SAY SELECT_ACTION3 @32
+SAY SELECT_ACTION4 @33
+SAY SELECT_ACTION5 @34
+SAY SELECT_ACTION6 @35
+SAY SELECT_ACTION7 @36
+SAY SELECT_RARE1 @37
+SAY SELECT_RARE2 @38
+SAY CRITICAL_HIT @39
+SAY CRITICAL_MISS @40
+SAY TARGET_IMMUNE @41
+SAY INVENTORY_FULL @42
+SAY SPELL_DISRUPTED @43
+SAY BIO @44
+
+ACTION_IF GAME_INCLUDES ~tob~ THEN BEGIN
+COPY ~Xan/Characters/O#Xan25S.cre~ ~override/O#Xan25.cre~
+SAY NAME1 @1
+SAY NAME2 @1
+SAY INITIAL_MEETING @2
+SAY MORALE @3
+SAY HAPPY @4
+SAY UNHAPPY_ANNOYED @5
+SAY UNHAPPY_SERIOUS @6
+SAY UNHAPPY_BREAKING @7
+SAY LEADER @8
+SAY TIRED @9
+SAY BORED @10
+SAY BATTLE_CRY1 @11
+SAY BATTLE_CRY2 @12
+SAY BATTLE_CRY3 @13
+SAY BATTLE_CRY4 @14
+SAY BATTLE_CRY5 @15
+SAY DAMAGE @16
+SAY DYING @17
+SAY HURT @18
+SAY AREA_FOREST @19
+SAY AREA_CITY @20
+SAY AREA_DUNGEON @21
+SAY AREA_DAY @22
+SAY AREA_NIGHT @23
+SAY SELECT_COMMON1 @24
+SAY SELECT_COMMON2 @25
+SAY SELECT_COMMON3 @26
+SAY SELECT_COMMON4 @27
+SAY SELECT_COMMON5 @28
+SAY SELECT_COMMON6 @29
+SAY SELECT_ACTION1 @30
+SAY SELECT_ACTION2 @31
+SAY SELECT_ACTION3 @32
+SAY SELECT_ACTION4 @33
+SAY SELECT_ACTION5 @34
+SAY SELECT_ACTION6 @35
+SAY SELECT_ACTION7 @36
+SAY SELECT_RARE1 @37
+SAY SELECT_RARE2 @38
+SAY CRITICAL_HIT @39
+SAY CRITICAL_MISS @40
+SAY TARGET_IMMUNE @41
+SAY INVENTORY_FULL @42
+SAY SPELL_DISRUPTED @43
+SAY BIO @55
+END
+
+BEGIN @51
+SUBCOMPONENT @47
+//REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @56
+REQUIRE_COMPONENT ~xan.tp2~ ~0~ @88
+
+ACTION_IF NOT GAME_INCLUDES ~tob~ THEN BEGIN
+PRINT @56
+END
+
+
+ACTION_IF GAME_INCLUDES ~tob~ THEN BEGIN
+COPY ~Xan/Characters/O#XanW9.cre~ ~override/O#Xan09.cre~
+SAY NAME1 @1
+SAY NAME2 @1
+SAY INITIAL_MEETING @2
+SAY MORALE @3
+SAY HAPPY @4
+SAY UNHAPPY_ANNOYED @5
+SAY UNHAPPY_SERIOUS @6
+SAY UNHAPPY_BREAKING @7
+SAY LEADER @8
+SAY TIRED @9
+SAY BORED @10
+SAY BATTLE_CRY1 @11
+SAY BATTLE_CRY2 @12
+SAY BATTLE_CRY3 @13
+SAY BATTLE_CRY4 @14
+SAY BATTLE_CRY5 @15
+SAY DAMAGE @16
+SAY DYING @17
+SAY HURT @18
+SAY AREA_FOREST @19
+SAY AREA_CITY @20
+SAY AREA_DUNGEON @21
+SAY AREA_DAY @22
+SAY AREA_NIGHT @23
+SAY SELECT_COMMON1 @24
+SAY SELECT_COMMON2 @25
+SAY SELECT_COMMON3 @26
+SAY SELECT_COMMON4 @27
+SAY SELECT_COMMON5 @28
+SAY SELECT_COMMON6 @29
+SAY SELECT_ACTION1 @30
+SAY SELECT_ACTION2 @31
+SAY SELECT_ACTION3 @32
+SAY SELECT_ACTION4 @33
+SAY SELECT_ACTION5 @34
+SAY SELECT_ACTION6 @35
+SAY SELECT_ACTION7 @36
+SAY SELECT_RARE1 @37
+SAY SELECT_RARE2 @38
+SAY CRITICAL_HIT @39
+SAY CRITICAL_MISS @40
+SAY TARGET_IMMUNE @41
+SAY INVENTORY_FULL @42
+SAY SPELL_DISRUPTED @43
+SAY BIO @44
+
+COPY ~Xan/Characters/O#Xan25W.cre~ ~override/O#Xan25.cre~
+SAY NAME1 @1
+SAY NAME2 @1
+SAY INITIAL_MEETING @2
+SAY MORALE @3
+SAY HAPPY @4
+SAY UNHAPPY_ANNOYED @5
+SAY UNHAPPY_SERIOUS @6
+SAY UNHAPPY_BREAKING @7
+SAY LEADER @8
+SAY TIRED @9
+SAY BORED @10
+SAY BATTLE_CRY1 @11
+SAY BATTLE_CRY2 @12
+SAY BATTLE_CRY3 @13
+SAY BATTLE_CRY4 @14
+SAY BATTLE_CRY5 @15
+SAY DAMAGE @16
+SAY DYING @17
+SAY HURT @18
+SAY AREA_FOREST @19
+SAY AREA_CITY @20
+SAY AREA_DUNGEON @21
+SAY AREA_DAY @22
+SAY AREA_NIGHT @23
+SAY SELECT_COMMON1 @24
+SAY SELECT_COMMON2 @25
+SAY SELECT_COMMON3 @26
+SAY SELECT_COMMON4 @27
+SAY SELECT_COMMON5 @28
+SAY SELECT_COMMON6 @29
+SAY SELECT_ACTION1 @30
+SAY SELECT_ACTION2 @31
+SAY SELECT_ACTION3 @32
+SAY SELECT_ACTION4 @33
+SAY SELECT_ACTION5 @34
+SAY SELECT_ACTION6 @35
+SAY SELECT_ACTION7 @36
+SAY SELECT_RARE1 @37
+SAY SELECT_RARE2 @38
+SAY CRITICAL_HIT @39
+SAY CRITICAL_MISS @40
+SAY TARGET_IMMUNE @41
+SAY INVENTORY_FULL @42
+SAY SPELL_DISRUPTED @43
+SAY BIO @55
+END
+
+BEGIN @78
+REQUIRE_PREDICATE NOT GAME_IS ~BG2EE eet~ @86
+REQUIRE_COMPONENT ~xan.tp2~ ~0~ @88
+
+ACTION_IF !(FILE_MD5 ~override/wqlfsa1.bam~ f1103eaf166c6f2420a20f1f01cebefb) THEN BEGIN
+  
+  COPY ~Xan/Flames~ ~override~
+
+  ACTION_FOR_EACH ~item~ IN ~blakblad~ ~bonedag~ ~morsword~ ~rodsword~ ~sw1h98~ ~_sw1h98~ BEGIN
+    ACTION_IF (FILE_EXISTS_IN_GAME ~%item%.itm~) THEN BEGIN
+      COPY_EXISTING ~%item%.itm~ ~override~
+        PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+          WRITE_ASCII 0x22 ~S1~
+        END
+      BUT_ONLY
+    END
+  END
+  
+  ACTION_FOR_EACH ~item~ IN ~sw1h53~ ~sw1h60~ ~sw1h61~ BEGIN
+    ACTION_IF (FILE_EXISTS_IN_GAME ~%item%.itm~) THEN BEGIN
+      COPY_EXISTING ~%item%.itm~ ~override~
+        PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+          READ_LONG  0x64 "ho"
+          READ_SHORT 0x68 "hc"
+          READ_LONG  0x6a "eo"
+          READ_SHORT 0x70 "ge"
+          SET "blade" = (~%SOURCE_RES%~ STRING_EQUAL ~sw1h53~ ? 0x9fefff00 :
+                         ~%SOURCE_RES%~ STRING_EQUAL ~sw1h60~ ? 0x9fefff00 :
+                         ~%SOURCE_RES%~ STRING_EQUAL ~sw1h61~ ? 0x9fefff00 : 0x00)
+          SET "grip"  = (~%SOURCE_RES%~ STRING_EQUAL ~sw1h53~ ? 0x20a5da00 : 
+                         ~%SOURCE_RES%~ STRING_EQUAL ~sw1h60~ ? 0x20a5da00 :
+                         ~%SOURCE_RES%~ STRING_EQUAL ~sw1h61~ ? 0x20a5da00 : 0x00)
+          SET "minor" = (~%SOURCE_RES%~ STRING_EQUAL ~sw1h53~ ? 0x3f00ff00 :
+                         ~%SOURCE_RES%~ STRING_EQUAL ~sw1h60~ ? 0x3f00ff00 :
+                         ~%SOURCE_RES%~ STRING_EQUAL ~sw1h61~ ? 0x3f00ff00 : 0x00)
+          FOR ("i1" = 0x00; "i1" < ("ge" * 0x30); "i1" += 0x30) BEGIN
+            READ_SHORT  ("eo" + "i1" + 0x00) "op"
+            PATCH_IF (("op" = 0x08) OR ("op" = 0x09)) THEN BEGIN
+              READ_LONG ("eo" + "i1" + 0x08) "lc"
+              PATCH_IF          ("lc" = 0x10) THEN BEGIN
+                WRITE_LONG ("eo" + "i1" + 0x04) "blade"
+                SET "blade" = 0x00
+              END ELSE PATCH_IF ("lc" = 0x14) THEN BEGIN
+                WRITE_LONG ("eo" + "i1" + 0x04) "grip"
+                SET "grip"  = 0x00
+              END ELSE PATCH_IF ("lc" = 0x15) THEN BEGIN
+                WRITE_LONG ("eo" + "i1" + 0x04) "minor"
+                SET "minor" = 0x00
+              END
+            END
+          END
+          PATCH_IF ("blade" != 0x00) THEN BEGIN
+            INSERT_BYTES ("eo" + (0x30 * "ge") + 0x00) 0x30
+            WRITE_SHORT  ("eo" + (0x30 * "ge") + 0x00) 0x08
+            WRITE_BYTE   ("eo" + (0x30 * "ge") + 0x02) 0x01
+            WRITE_LONG   ("eo" + (0x30 * "ge") + 0x04) "blade"
+            WRITE_LONG   ("eo" + (0x30 * "ge") + 0x08) 0x10
+            WRITE_BYTE   ("eo" + (0x30 * "ge") + 0x0c) 0x02
+            WRITE_BYTE   ("eo" + (0x30 * "ge") + 0x12) 0x64
+            SET "ge" += 0x01
+          END
+          PATCH_IF ("grip" != 0x00) THEN BEGIN
+            INSERT_BYTES ("eo" + (0x30 * "ge") + 0x00) 0x30
+            WRITE_SHORT  ("eo" + (0x30 * "ge") + 0x00) 0x08
+            WRITE_BYTE   ("eo" + (0x30 * "ge") + 0x02) 0x01
+            WRITE_LONG   ("eo" + (0x30 * "ge") + 0x04) "grip"
+            WRITE_LONG   ("eo" + (0x30 * "ge") + 0x08) 0x14
+            WRITE_BYTE   ("eo" + (0x30 * "ge") + 0x0c) 0x02
+            WRITE_BYTE   ("eo" + (0x30 * "ge") + 0x12) 0x64
+            SET "ge" += 0x01
+          END
+          PATCH_IF ("minor" != 0x00) THEN BEGIN
+            INSERT_BYTES ("eo" + (0x30 * "ge") + 0x00) 0x30
+            WRITE_SHORT  ("eo" + (0x30 * "ge") + 0x00) 0x08
+            WRITE_BYTE   ("eo" + (0x30 * "ge") + 0x02) 0x01
+            WRITE_LONG   ("eo" + (0x30 * "ge") + 0x04) "minor"
+            WRITE_LONG   ("eo" + (0x30 * "ge") + 0x08) 0x15
+            WRITE_BYTE   ("eo" + (0x30 * "ge") + 0x0c) 0x02
+            WRITE_BYTE   ("eo" + (0x30 * "ge") + 0x12) 0x64
+            SET "ge" += 0x01
+          END
+          PATCH_IF (("blade" != 0x00) OR ("grip" != 0x00) OR ("minor" != 0x00)) THEN BEGIN
+            WRITE_SHORT 0x70 "ge"
+            FOR ("i1" = 0x00; "i1" < (0x38 * "hc"); "i1" += 0x38) BEGIN
+              WRITE_SHORT ("ho" + "i1" + 0x20) "ge"
+              READ_SHORT  ("ho" + "i1" + 0x1e) "ec"
+              SET "ge" += "ec"
+            END
+          END
+        END
+      BUT_ONLY
+    END
+  END
+
+END
+
+BEGIN @87
+REQUIRE_COMPONENT ~xan.tp2~ ~0~ @88
+
+LAF HANDLE_AUDIO
+  STR_VAR
+    audio_path = ~Xan/audio2~
+    oggdec_path = ~Xan/audio~
+    sox_path = ~Xan/audio~
+END

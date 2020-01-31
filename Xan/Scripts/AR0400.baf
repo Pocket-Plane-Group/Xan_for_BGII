@@ -1,0 +1,9 @@
+IF
+InParty("O#Xan")
+Global("O#XanEldrethSpawn1","AR0400",0)
+THEN
+RESPONSE #100
+CreateCreature("O#Aegnor",[1740.2763],0)
+SetGlobal("O#XanEldrethSpawn1","AR0400",1)
+Continue()
+END

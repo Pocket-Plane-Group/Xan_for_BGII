@@ -1,0 +1,49 @@
+@46 = ~To ksiê¿ycowe ostrze zgas³o w koñcu po setkach lat swojej s³u¿by. Teraz nie jest niczym wiêcej ni¿ tylko zwyk³ym mieczem, którego mo¿e u¿yæ ka¿dy wojownik.
+
+STATYSTKI:
+
+Obra¿enia:  1k8
+Typ obra¿eñ:  sieczne
+Bonus to hit:  3
+Bonus to damage:  3
+Waga: 4
+Speed Factor: 2
+Rodzaj bieg³oœci:  d³ugie miecze
+Typ broni:  jednorêczna
+~
+@76 = ~This potent weapon was created by the smiths of ancient Myth Drannor. Moonblades are used in the long process of selecting a ruler for the isle of Evermeet. A Moonblade chooses its owner, and in the case of this sword it has chosen the elf, Xan. Only Xan can use this blade, anyone else who tries will find themselves unable to lift the sword. This particular Moonblade gives resistance to fire and gives its user a bonus to his armor class. It now also protects its wielder from silence, and grants him invisibility.
+
+STATISTICS:
+
+Damage:  1D8
+Damage type:  slashing
+Bonus to hit:  4
+Bonus to damage:  4
+Special:
+ +1 bonus to Armor Class
+ +50% Fire Resistance
+ Invisibility
+ Vocalize
+Weight: 4
+Speed Factor: 2
+Proficiency Type:  Small Sword
+Type:  1-handed
+~
+@77 = ~This potent weapon was created by the smiths of ancient Myth Drannor. Moonblades are used in the long process of selecting a ruler for the isle of Evermeet. A Moonblade chooses its owner, and in the case of this sword it has chosen the elf, Xan. Only Xan can use this blade, anyone else who tries will find themselves unable to lift the sword. This particular Moonblade gives resistance to fire and gives its user a bonus to his armor class. It now also protects its wielder from silence, and grants him an extra edge in battle.
+
+STATISTICS:
+
+Combat Abilities: sets attacks to +1 per round
+Damage:  1D8
+Damage type:  slashing
+Bonus to hit:  4
+Bonus to damage:  4
+Special:
+ +1 bonus to Armor Class
+ +50% Fire Resistance
+ Vocalize
+Weight: 4
+Speed Factor: 0
+Proficiency Type:  Long Sword
+Type:  1-handed
+~

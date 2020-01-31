@@ -1,0 +1,11 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+SetGlobal("O#XanRicarQuest","GLOBAL",6)
+ActionOverride("O#Ricar",MoveToPoint([3030.2363]))
+ActionOverride("O#Ricar",Face(10))
+Wait(3)
+ActionOverride("O#Ricar",StartDialogueNoSet(Player1))
+END

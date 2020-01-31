@@ -1,0 +1,48 @@
+IF
+Global("O#XanSieneApproaches","LOCALS",0)
+Global("O#XanSieneAppeared","GLOBAL",1)
+InParty("O#Xan")
+See("O#Xan")
+!StateCheck("O#Xan",CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+SetGlobal("O#XanSieneApproaches","LOCALS",1)
+Dialogue("O#Xan")
+END
+
+IF
+Global("O#XanSieneAppeared","GLOBAL",7)
+Global("O#XanSlaversLeftAlone","GLOBAL",1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+SetGlobal("O#XanSlaversLeftAlone","GLOBAL",2)
+StartDialogueNoSet(Player1)
+END
+
+IF
+Global("O#XanSieneAppeared","GLOBAL",6)
+Global("O#XanSieneIsUpset","LOCALS",0)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+!See("O#Khalid")
+THEN
+RESPONSE #100
+SetGlobal("O#XanSieneIsUpset","LOCALS",1)
+StartDialogueNoSet(Player1)
+END
+
+IF
+Global("O#XanSieneAppeared","GLOBAL",10)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+Dead("O#Khalid")
+CombatCounter(0)
+Global("O#XanSieneIsVeryUpset","LOCALS",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanSieneIsVeryUpset","LOCALS",1)
+StartDialogueNoSet(Player1)
+END

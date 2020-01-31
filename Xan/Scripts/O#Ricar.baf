@@ -1,0 +1,23 @@
+IF
+Global("O#XanEncounterToB3","GLOBAL",2)
+THEN
+RESPONSE #100
+Dialogue(Player1)
+END
+
+IF
+AttackedBy([GOODCUTOFF],DEFAULT)
+Global("GoodElfKill","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("GoodElfKill","GLOBAL",2)
+END
+
+IF
+Global("GoodElfKill","GLOBAL",2)
+Global("TurnHostile","LOCALS",0)
+THEN
+RESPONSE #100
+SetGlobal("TurnHostile","LOCALS",1)
+ApplySpell(Myself,DRYAD_TELEPORT)
+END

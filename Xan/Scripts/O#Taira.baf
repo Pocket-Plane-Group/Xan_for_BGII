@@ -1,0 +1,12 @@
+IF
+Global("O#XanTairaAsks","GLOBAL",0)
+Global("O#XanTairaApproaches","LOCALS",0)
+See("O#Xan")
+InParty("O#Xan")
+!StateCheck("O#Xan",CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+SetGlobal("O#XanTairaApproaches","LOCALS",1)
+ActionOverride("O#Taira",Dialogue("O#Xan"))
+END

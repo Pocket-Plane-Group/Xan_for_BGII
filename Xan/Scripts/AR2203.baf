@@ -1,0 +1,11 @@
+IF
+InParty("O#Xan")
+OR(2)
+Global("O#XanRomanceActive","GLOBAL",2)
+Global("O#XanRT15","GLOBAL",2)
+Global("O#XanDrowFSpawned","AR2203",0)
+THEN
+RESPONSE #100
+CreateCreature("O#DrowF",[745.1021],0)
+SetGlobal("O#XanDrowFSpawned","AR2203",1)
+END

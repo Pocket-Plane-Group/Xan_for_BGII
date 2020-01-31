@@ -1,0 +1,12 @@
+IF
+Global("O#XanTairaAsks","GLOBAL",2)
+Global("O#XanAzagSpawned","AR0406",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanAzagSpawned","AR0406",1)
+CreateCreature("O#Azag",[510.1370],0)
+CreateCreature("O#Botan",[540.1380],0)
+CreateCreature("O#Dur",[570.1365],0)
+CreateCreature("O#Eligor",[600.1380],0)
+Continue()
+END

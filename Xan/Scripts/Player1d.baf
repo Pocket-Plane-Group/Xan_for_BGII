@@ -1,0 +1,31 @@
+IF
+GlobalTimerExpired("O#XanDream1TT","GLOBAL")
+Global("O#XanDreamTalk1","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanDreamTalk1","GLOBAL",1)
+SetGlobalTimer("O#XanDream2TT","GLOBAL",ONE_DAY)
+StartCutSceneMode()
+StartCutScene("O#Drm1a")
+END
+
+IF
+GlobalTimerExpired("O#XanDream2TT","GLOBAL")
+Global("O#XanDreamTalk2","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanDreamTalk2","GLOBAL",1)
+SetGlobalTimer("O#XanDream3TT","GLOBAL",ONE_DAY)
+StartCutSceneMode()
+StartCutScene("O#Drm2a")
+END
+
+IF
+GlobalTimerExpired("O#XanDream3TT","GLOBAL")
+Global("O#XanDreamTalk3","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanDreamTalk3","GLOBAL",1)
+StartCutSceneMode()
+StartCutScene("O#Drm3a")
+END

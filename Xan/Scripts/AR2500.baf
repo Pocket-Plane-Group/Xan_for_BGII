@@ -1,0 +1,23 @@
+IF
+InParty("O#Xan") 
+InMyArea("O#Xan") 
+!StateCheck("O#Xan",CD_STATE_NOTVALID)
+GlobalGT("EllesimeDream1","GLOBAL",0)
+Global("O#XanRicarQuest","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanRicarQuest","GLOBAL",1)
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("O#Cut2f")
+END
+
+IF
+GlobalGT("O#XanRicarQuest","GLOBAL",0)
+GlobalGT("ElvenCityTree","GLOBAL",0)
+Global("O#XanRicarDeleted","AR2500",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanRicarDeleted","AR2500",1)
+ActionOverride("O#Ricar",DestroySelf())
+END

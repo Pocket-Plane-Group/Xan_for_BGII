@@ -1,0 +1,121 @@
+// 6. At rest in a tavern, bonded, Saradush or Amkethran, AR5003 or AR5501
+IF
+!RealGlobalTimerNotExpired("O#XanToBNightTimer","GLOBAL")
+Global("O#XanRomanceActive","GLOBAL",2)
+Global("O#XanBondedPathAlive","GLOBAL",2)
+Global("O#XanToBNightTalk6","GLOBAL",0)
+InParty(Myself)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+OR(2)
+AreaCheck("AR5501")
+AreaCheck("AR5003")
+THEN
+RESPONSE #100
+SetGlobal("O#XanToBNightTalk6","GLOBAL",1)
+RealSetGlobalTimer("O#XanToBNightTimer","GLOBAL",50)
+StartDialogueNoSet(Player1)
+END
+
+// 5. At rest after Yaga-Shura's death, romance/bonded
+IF
+!RealGlobalTimerNotExpired("O#XanToBNightTimer","GLOBAL")
+Global("O#XanRomanceActive","GLOBAL",2)
+Global("O#XanToBNightTalk5","GLOBAL",0)
+InParty(Myself)
+Dead("yaga01")
+!AreaCheck("AR5501")
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+SetGlobal("O#XanToBNightTalk5","GLOBAL",1)
+RealSetGlobalTimer("O#XanToBNightTimer","GLOBAL",50)
+PlaySong(0)
+PlaySound("O#XAN")
+StartDialogueNoSet(Player1)
+END
+
+// 1. At rest after Gorion's Wraith, romance/bonded
+IF
+!RealGlobalTimerNotExpired("O#XanToBNightTimer","GLOBAL")
+Global("O#XanRomanceActive","GLOBAL",2)
+Global("O#XanToBNightTalk1","GLOBAL",0)
+InParty(Myself)
+GlobalGT("O#XanGW","GLOBAL",1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+!AreaCheck("AR5003")
+THEN
+RESPONSE #100
+SetGlobal("O#XanToBNightTalk1","GLOBAL",1)
+RealSetGlobalTimer("O#XanToBNightTimer","GLOBAL",50)
+PlaySong(0)
+PlaySound("O#XAN")
+StartDialogueNoSet(Player1)
+END
+
+// 4. At rest after Sendai or Abazigail, romance/bonded
+IF
+!RealGlobalTimerNotExpired("O#XanToBNightTimer","GLOBAL")
+Global("O#XanRomanceActive","GLOBAL",2)
+Global("O#XanToBNightTalk4","GLOBAL",0)
+InParty(Myself)
+!AreaCheck("AR5501")
+OR(2)
+Dead("Sendai")
+Dead("Abazigal1")
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+SetGlobal("O#XanToBNightTalk4","GLOBAL",1)
+RealSetGlobalTimer("O#XanToBNightTimer","GLOBAL",50)
+PlaySong(0)
+PlaySound("O#XAN")
+StartDialogueNoSet(Player1)
+END
+
+// 2. At rest, bonded, night, outdoors, not in Saradush
+IF
+!RealGlobalTimerNotExpired("O#XanToBNightTimer","GLOBAL")
+Global("O#XanRomanceActive","GLOBAL",2)
+Global("O#XanBondedPathAlive","GLOBAL",2)
+Global("O#XanToBNightTalk2","GLOBAL",0)
+InParty(Myself)
+AreaType(OUTDOOR)
+TimeOfDay(NIGHT)
+!AreaCheck("AR5000")
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+SetGlobal("O#XanToBNightTalk2","GLOBAL",1)
+RealSetGlobalTimer("O#XanToBNightTimer","GLOBAL",50)
+PlaySong(0)
+PlaySound("O#XAN")
+StartDialogueNoSet(Player1)
+END
+
+// 3. At rest, bonded, night, outdoors, after visiting the Watcher's Keep but not outside it, Chapter 9
+IF
+!RealGlobalTimerNotExpired("O#XanToBNightTimer","GLOBAL")
+Global("O#XanRomanceActive","GLOBAL",2)
+Global("O#XanBondedPathAlive","GLOBAL",2)
+Global("O#XanToBNightTalk3","GLOBAL",0)
+InParty(Myself)
+GlobalGT("O#XanKeepEntered","GLOBAL",1)
+Global("Chapter","GLOBAL",%bg2_chapter_9%)
+!AreaCheck("AR3000")
+AreaType(OUTDOOR)
+TimeOfDay(NIGHT)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+SetGlobal("O#XanToBNightTalk3","GLOBAL",1)
+RealSetGlobalTimer("O#XanToBNightTimer","GLOBAL",50)
+PlaySong(0)
+PlaySound("O#XAN")
+StartDialogueNoSet(Player1)
+END

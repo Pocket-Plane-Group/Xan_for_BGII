@@ -1,0 +1,10 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+MoveViewObject(Player1,INSTANT)
+CreateCreatureObjectDoor("O#DrowM",Player1,0,0,0)
+Wait(5)
+ActionOverride("O#DrowM",StartDialogueNoSet(Player1))
+END

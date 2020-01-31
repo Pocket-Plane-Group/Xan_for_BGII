@@ -1,0 +1,28 @@
+IF
+InParty("O#Xan")
+Global("O#XanTairaSpawned","AR0900",0)
+THEN
+RESPONSE #100
+CreateCreature("O#Taira",[2850.2000],7)
+SetGlobal("O#XanTairaSpawned","AR0900",1)
+Continue()
+END
+
+IF 
+Global("O#XanRotanPissed","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("O#XanRotanPissed","GLOBAL",2)
+ActionOverride("O#Taira",DestroySelf())
+END
+
+IF
+Global("O#XanTairaAsks","GLOBAL",4)
+Global("O#XanTairaReSpawned","AR0900",0)
+THEN
+RESPONSE #100
+ActionOverride("O#Taira",DestroySelf())
+CreateCreature("O#Taira",[2105.2330],6)
+CreateCreature("O#Rotan",[2095.2340],6)
+SetGlobal("O#XanTairaReSpawned","AR0900",1)
+END

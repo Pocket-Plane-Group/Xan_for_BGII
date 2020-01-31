@@ -1,0 +1,21 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+CreateVisualEffectObject("SPflsrin","O#Xan")
+ScreenShake([4.4],30)
+CreateVisualEffectObject("SPflsrin","O#Xan")
+Wait(1)
+CreateVisualEffectObject("SPFIREPI","O#Xan")
+CreateVisualEffectObject("SPSTRENH","O#Xan")
+ActionOverride("O#Xan",TakePartyItem("O#XanMB"))
+ActionOverride("O#Xan",DestroyItem("O#XanMB"))
+ActionOverride("O#Xan",TakePartyItem("O#XanMS"))
+ActionOverride("O#Xan",DestroyItem("O#XanMS"))
+ActionOverride("O#Xan",GiveItemCreate("O#XanDB","O#Xan",0,0,0))
+ActionOverride("O#Xan",GiveItemCreate("O#XanJR","O#Xan",0,0,0))
+ApplySpell("O#Xan",SURE_SLEEP)
+Wait(2)
+EndCutSceneMode()
+END

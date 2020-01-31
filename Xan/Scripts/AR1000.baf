@@ -1,0 +1,115 @@
+IF
+Global("O#XanSpawned","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("O#Xan09",[2745.321],4)
+SetGlobal("O#XanSpawned","GLOBAL",1)
+Continue()
+END
+
+// Experience fixer
+// 400000
+IF
+!Dead("O#Xan")
+Global("O#XanJoined","GLOBAL",0)
+Global("O#XanExperienceSet","GLOBAL",0)
+XPLT("O#Xan",400000)
+XPGT(Player1,280000)
+XPLT(Player1,600001)
+THEN
+RESPONSE #100
+SetGlobal("O#XanExperienceSet","GLOBAL",1)
+AddXPObject("O#Xan",239000)
+Continue()
+END
+
+// 800000
+IF
+!Dead("O#Xan")
+Global("O#XanJoined","GLOBAL",0) 
+Global("O#XanExperienceSet","GLOBAL",1)
+XPLT("O#Xan",800000)
+XPGT(Player1,600000)
+XPLT(Player1,1000001)
+THEN
+RESPONSE #100
+SetGlobal("O#XanExperienceSet","GLOBAL",2)
+AddXPObject("O#Xan",400000)
+Continue()
+END
+
+IF
+!Dead("O#Xan")
+Global("O#XanJoined","GLOBAL",0) 
+Global("O#XanExperienceSet","GLOBAL",0)
+XPLT("O#Xan",800000)
+XPGT(Player1,600000)
+XPLT(Player1,1000001)
+THEN
+RESPONSE #100
+SetGlobal("O#XanExperienceSet","GLOBAL",2)
+AddXPObject("O#Xan",639000)
+Continue()
+END
+
+// 1200000
+IF
+!Dead("O#Xan")
+Global("O#XanJoined","GLOBAL",0) 
+Global("O#XanExperienceSet","GLOBAL",1)
+XPLT("O#Xan",1200000)
+XPGT(Player1,1000000)
+THEN
+RESPONSE #100
+SetGlobal("O#XanExperienceSet","GLOBAL",3)
+AddXPObject("O#Xan",800000)
+Continue()
+END
+
+IF
+!Dead("O#Xan")
+Global("O#XanJoined","GLOBAL",0) 
+Global("O#XanExperienceSet","GLOBAL",2)
+XPLT("O#Xan",1200000)
+XPGT(Player1,1000000)
+THEN
+RESPONSE #100
+SetGlobal("O#XanExperienceSet","GLOBAL",3)
+AddXPObject("O#Xan",400000)
+Continue()
+END
+
+IF
+!Dead("O#Xan")
+Global("O#XanJoined","GLOBAL",0) 
+Global("O#XanExperienceSet","GLOBAL",0)
+XPLT("O#Xan",1200000)
+XPGT(Player1,1000000)
+THEN
+RESPONSE #100
+SetGlobal("O#XanExperienceSet","GLOBAL",3)
+AddXPObject("O#Xan",1039000)
+Continue()
+END
+
+IF
+Global("O#XanQuest4","GLOBAL",1)
+Global("O#XanEldrethSpawn2","AR1000",0)
+InParty("O#Xan")
+TimeOfDay(NIGHT)
+THEN
+RESPONSE #100
+CreateCreature("O#Aegnor",[2658.220],4)
+SetGlobal("O#XanEldrethSpawn2","AR1000",1)
+END
+
+IF
+Global("O#XanQuest4","GLOBAL",1)
+Global("O#XanEldrethSpawn2","AR1000",1)
+InParty("O#Xan")
+!TimeOfDay(NIGHT)
+THEN
+RESPONSE #100
+ActionOverride("O#Aegnor",DestroySelf())
+SetGlobal("O#XanEldrethSpawn2","AR1000",0)
+END

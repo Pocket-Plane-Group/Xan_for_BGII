@@ -1,0 +1,23 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+FadeToColor([20.0],0)
+Wait(1)
+CreateCreature("O#Hiel",[1937.2103],0)
+CreateCreature("O#Naiz",[1889.2078],0)
+CreateCreature("O#Verell",[1995.2094],0)
+JumpToPoint([1910.2185])
+MoveViewPoint([1900.2100],INSTANT)
+ActionOverride("O#Xan",JumpToPoint([1944.2165]))
+ActionOverride("O#Aegnor",JumpToPoint([1855.2122]))
+Face(8)
+ActionOverride("O#Xan",Face(8))
+ActionOverride("O#Aegnor",Face(10))
+Wait(1)
+MultiPlayerSync()
+FadeFromColor([20.0],0)
+Wait(1)
+ActionOverride("O#Hiel",StartDialogueNoSet("O#Xan"))
+END

@@ -1,0 +1,8 @@
+IF
+Global("O#XanSeliaSpawned","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("O#XanSeliaSpawned","GLOBAL",2)
+CreateCreature("O#Selia",[860.750],0)
+Continue()
+END

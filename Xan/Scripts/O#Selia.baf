@@ -1,0 +1,9 @@
+IF
+AttackedBy([GOODCUTOFF],DEFAULT)
+Allegiance(Myself,NEUTRAL)
+Global("O#XanSeliaAttacked","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanSeliaAttacked","GLOBAL",1)
+ApplySpell(Myself,DRYAD_TELEPORT)
+END

@@ -1,0 +1,22 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+FadeToColor([20.0],0)
+Wait(1)
+ActionOverride("O#Xan",DropInventory())
+ActionOverride("O#Xan",LeaveParty())
+ActionOverride("O#Xan",SetLeavePartyDialogFile())
+ActionOverride("O#Xan",DestroySelf())
+ActionOverride("O#Vel",DestroySelf())
+ActionOverride("O#Khalid",DestroySelf())
+ActionOverride("O#Merc",DestroySelf())
+ActionOverride("O#Merc1",DestroySelf())
+ActionOverride("O#Merc2",DestroySelf())
+Wait(1)
+MultiPlayerSync()
+FadeFromColor([20.0],0)
+Wait(2)
+ActionOverride("O#Siene",StartDialogueNoSet(Player1))
+END

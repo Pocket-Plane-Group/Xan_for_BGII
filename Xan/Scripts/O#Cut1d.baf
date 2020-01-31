@@ -1,0 +1,25 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+PlayDead(30)
+FadeToColor([20.0],0)
+SetGlobal("O#XanPCTransported","GLOBAL",2)
+ActionOverride("O#Merc",DestroySelf())
+ActionOverride("O#Merc1",DestroySelf())
+ActionOverride("O#Merc2",DestroySelf())
+ActionOverride("O#Vel",DestroySelf())
+ActionOverride("O#Khalid",DestroySelf())
+LeaveAreaLUA("AR5506","",[300.300],0)
+ActionOverride(Player2,LeaveAreaLUA("AR5506","",[320.320],0))
+ActionOverride(Player3,LeaveAreaLUA("AR5506","",[260.320],0))
+ActionOverride(Player4,LeaveAreaLUA("AR5506","",[330.360],0))
+ActionOverride(Player5,LeaveAreaLUA("AR5506","",[280.260],0))
+ActionOverride(Player6,LeaveAreaLUA("AR5506","",[360.330],0))
+Wait(1)
+MultiPlayerSync()
+FadeFromColor([20.0],0)
+PlayDead(30)
+ActionOverride("O#Xan",StartDialogueNoSet(Player1))
+END

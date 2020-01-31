@@ -1,0 +1,8 @@
+IF
+InPartyAllowDead("O#Xan")
+GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)
+Global("O#XanEnteringHell1","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("O#XanEnteringHell1","GLOBAL",2)
+END

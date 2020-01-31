@@ -1,0 +1,139 @@
+IF
+Global("O#XanMoonbladeExtinguished","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("O#XanMoonbladeExtinguished","GLOBAL",2)
+StartCutSceneMode()
+StartCutScene("O#XanM")
+END
+
+IF
+Global("O#XanMoonbladeExtinguished","GLOBAL",2)
+Global("O#XanBodhiSpeaks","AR0800",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanBodhiSpeaks","AR0800",1)
+RealSetGlobalTimer("O#XanBodhiTimer","GLOBAL",5)
+ActionOverride("BodhiAmb",StartDialogueNoSet(Player1))
+END
+
+IF
+Global("O#XanMoonbladeExtinguished","GLOBAL",2)
+InParty("Imoen2")
+Global("O#XanImoenMoonbladeExtinguished","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanImoenMoonbladeExtinguished","GLOBAL",1)
+END
+
+IF
+Global("O#XanMoonbladeExtinguished","GLOBAL",2)
+InParty("Jaheira")
+Global("O#XanJaheiMoonbladeExtinguished","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanJaheiMoonbladeExtinguished","GLOBAL",1)
+END
+
+IF
+Global("O#XanMoonbladeExtinguished","GLOBAL",2)
+!Dead("O#Xan")
+!StateCheck("O#Xan",STATE_SLEEPING)
+THEN
+RESPONSE #100
+ApplySpell("O#Xan",SURE_SLEEP)
+END
+
+IF
+Global("O#XanMoonbladeExtinguished","GLOBAL",2)
+OR(3)
+StateCheck("O#Xan",STATE_CHARMED)
+!InParty("O#Xan")
+Dead("O#Xan")
+THEN
+RESPONSE #100
+ActionOverride("O#Xan",LeaveParty())
+ActionOverride("O#Xan",Kill(Myself))
+SetGlobal("O#XanMoonbladeExtinguished","GLOBAL",3)
+END
+
+IF
+Global("O#XanMoonbladeExtinguished","GLOBAL",2)
+RealGlobalTimerExpired("O#XanBodhiTimer","GLOBAL")
+CombatCounter(0)
+InParty("O#Xan")
+THEN
+RESPONSE #100
+StateOverrideFlag(TRUE)
+ActionOverride("O#Xan",StartDialogueNoSet(Player1))
+END
+
+IF
+Global("O#XanMoonbladeExtinguished","GLOBAL",3)
+InParty("Imoen2")
+!Dead("C6Bodhi")
+CombatCounter(0)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck("Imoen2",CD_STATE_NOTVALID)
+Global("O#XanImoenMoonbladeExtinguished","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("O#XanImoenMoonbladeExtinguished","GLOBAL",2)
+END
+
+IF
+Global("O#XanImoenMoonbladeExtinguished","GLOBAL",2)
+InParty("Imoen2")
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck("Imoen2",CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+ActionOverride("Imoen2",StartDialogueNoSet(Player1))
+END
+
+IF
+Global("O#XanMoonbladeExtinguished","GLOBAL",3)
+InParty("Jaheira")
+!Dead("C6Bodhi")
+CombatCounter(0)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+!StateCheck("Jaheira",CD_STATE_NOTVALID)
+Global("O#XanJaheiMoonbladeExtinguished","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("O#XanJaheiMoonbladeExtinguished","GLOBAL",2)
+END
+
+IF
+Global("O#XanJaheiMoonbladeExtinguished","GLOBAL",2)
+InParty("Jaheira")
+!StateCheck(Player1,CD_STATE_NOTVALID)
+!StateCheck("Jaheira",CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+ActionOverride("Jaheira",StartDialogueNoSet(Player1))
+END
+
+IF
+Global("O#XanMoonbladeExtinguished","GLOBAL",3)
+InParty("Imoen2")
+Dead("C6Bodhi")
+AreaCheck("AR0800")
+CombatCounter(0)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck("Imoen2",CD_STATE_NOTVALID)
+Global("O#XanImoenMoonbladeExtinguished","GLOBAL",3)
+THEN
+RESPONSE #100
+SetGlobal("O#XanImoenMoonbladeExtinguished","GLOBAL",4)
+END
+
+IF
+Global("O#XanImoenMoonbladeExtinguished","GLOBAL",4)
+InParty("Imoen2")
+!StateCheck(Player1,CD_STATE_NOTVALID)
+!StateCheck("Imoen2",CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+ActionOverride("Imoen2",StartDialogueNoSet(Player1))
+END

@@ -1,0 +1,50 @@
+@46 = ~This moonblade is now dead, its powers finally extinguished after hundreds of years of use. Now it is simply a sharp and well-balanced sword, usable by warriors of any skill.
+
+STATISTICS:
+
+THAC0: +3
+Damage:  1d8+3 (slashing)
+Speed Factor: 2
+Proficiency Type:  Long Sword
+Type:  1-handed
+
+Weight: 4~
+@76 = ~This potent weapon was created by the smiths of ancient Myth Drannor. Moonblades are used in the long process of selecting a ruler for the isle of Evermeet. A Moonblade chooses its owner, and in the case of this sword it has chosen the elf, Xan. Only Xan can use this blade, anyone else who tries will find themselves unable to lift the sword. This particular Moonblade gives resistance to fire and gives its user a bonus to his armor class. It now also protects its wielder from silence, and grants him invisibility.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+– Fire Resistance: +50%
+- Invisibility
+- Vocalize
+
+THAC0: +4
+Damage:  1d8+4 (slashing)
+Speed Factor: 2
+Proficiency Type: Dagger
+Type:  1-handed
+
+Weight: 4
+
+
+~
+@77 = ~This potent weapon was created by the smiths of ancient Myth Drannor. Moonblades are used in the long process of selecting a ruler for the isle of Evermeet. A Moonblade chooses its owner, and in the case of this sword it has chosen the elf, Xan. Only Xan can use this blade, anyone else who tries will find themselves unable to lift the sword. This particular Moonblade gives resistance to fire and gives its user a bonus to his armor class. It now also protects its wielder from silence, and grants him an extra edge in battle.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+– Fire Resistance: +50%
+- Vocalize
+
+Combat abilities:
+– 1 extra attack per round
+
+THAC0: +4
+Damage:  1d8+4 (slashing)
+Speed Factor: 0
+Proficiency Type:  Long Sword
+Type:  1-handed
+
+Weight: 4~

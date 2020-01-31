@@ -1,0 +1,295 @@
+@0 = ~PNJ Xan, module pour Baldur's Gate II~
+@1 = ~Xan~
+@2 = ~Que... que fais-tu ici ?~ [O#XAN002]
+@3 = ~Nous sommes tous perdus, fuyons tant qu'il est encore temps.~ [O#XAN003]
+@4 = ~Peut-être survivrons-nous plus longtemps que je ne l'aurais cru.~ [O#XAN004]
+@5 = ~Ce groupe est particulièrement lamentable aujourd'hui !~ [O#XAN005]
+@6 = ~Continuons à nous comporter aussi mal et nous mériterons notre perdition.~ [O#XAN006]
+@7 = ~Je ne peux pas souscrire à ces actes ! Je dois me retirer de cette assemblée de barbares.~ [O#XAN007]
+@8 = ~Tant que je serai responsable du groupe, je m'engage à ce que nous ne nous fassions pas TOUS tuer.~ [O#XAN008]
+@9 = ~Je tomberai de fatigue avant d'avoir le temps de m'effondrer sur le champ de bataille.~ [O#XAN009]
+@10 = ~S'il est écrit que nous allons échouer, pouvons-nous au moins faire en sorte que ce soit rapide ?!~ [O#XAN010]
+@11 = ~En avant, prenons la direction de l'absurde !~ [O#XAN011]
+@12 = ~Nous n'avons aucune chance.~ [O#XAN012]
+@13 = ~Ca va mal se terminer.~ [O#XAN013]
+@14 = ~Précipitons l'inévitable.~ [O#XAN014]
+@15 = ~Je t'avais prévenu qu'on en arriverait là !~ [O#XAN015] ~Je t'avais prévenue qu'on en arriverait là !~ [O#XAN015]
+@16 = ~~ [O#XAN016]
+@17 = ~~ [O#XAN017]
+@18 = ~Mes blessures sont trop graves, je suis un homme mort.~ [O#XAN018]
+@19 = ~La grandeur de la forêt me fait sentir ma petitesse.~ [O#XAN019]
+@20 = ~L'agitation des grandes villes me fait sentir ma dérision.~ [O#XAN020]
+@21 = ~Cet endroit sera notre tombeau.~ [O#XAN021]
+@22 = ~Le soleil brille, et je m'étonne que nous soyons encore là pour assister à un nouveau jour.~ [O#XAN022]
+@23 = ~Je doute que nous serons encore en vie pour voir le lever du jour.~ [O#XAN023]
+@24 = ~Nous courons tous à la ruine.~ [O#XAN024]
+@25 = ~La vie est tellement vaine.~ [O#XAN025]
+@26 = ~Notre quête est perdue d'avance.~ [O#XAN026]
+@27 = ~C'est inutile.~ [O#XAN027]
+@28 = ~Renonce.~ [O#XAN028]
+@29 = ~Résister est tellement vain.~ [O#XAN029]
+@30 = ~Quelle importance ?~ [O#XAN030]
+@31 = ~A quoi bon ?~ [O#XAN031]
+@32 = ~Pourquoi pas.~ [O#XAN032]
+@33 = ~Pour quoi faire ?~ [O#XAN033]
+@34 = ~Il n'y a aucun espoir.~ [O#XAN034]
+@35 = ~C'est peine perdue.~ [O#XAN035]
+@36 = ~Je ferai de mon mieux, mais ne vous attendez pas à grand chose.~ [O#XAN036]
+@37 = ~Nous nous leurrons en croyant que notre pitoyable groupe fera le poids face à l'ennemi.~ [O#XAN037]
+@38 = ~Epargnons-nous un vain effort. Baissons les bras et attendons la mort.~ [O#XAN038]
+@39 = ~Ah.~ [O#XAN039]
+@40 = ~Puisque tu l'exiges.~ [O#XAN040]
+@41 = ~Il me faut une autre arme !~ [O#XAN041]
+@42 = ~Tu crois vraiment que je vais porter tout ça ?~ [O#XAN042]
+@43 = ~Mon sort !!~ [O#XAN043]
+@44 = ~Lorsque vous l'interrogez sur son passé, XAN vous parle, la nostalgie dans la voix, de son pays d'origine, le fief elfique d'Evereska, ainsi que de son rôle en tant que Grismanteau. Visiblement, il a été envoyé en Amn pour accomplir une mission confiée par son peuple, mais il refuse de vous en parler davantage. D'après ce qu'il a pu évoquer, sa quête semble être de taille, et Xan l'aborde avec une bonne dose d'appréhension. Mais vous avez l'impression qu'il en est de même avec tout. Il a consacré sa vie à accroître sa maîtrise de la magie et est devenu un magicien talentueux. Mais ce zèle lui a laissé peu de temps libre pour se faire des amis ou pour pratiquer d'autres passe-temps. Il semble être très compétent, mais il n'exerce peut-être pas une bonne influence sur le moral du groupe.~
+@45 = ~Lorsque vous l'interrogez sur son passé, XAN hausse un sourcil. Vos passés sont mêlés, dit-il doucement, et vous, plus que n'importe qui, devriez le savoir. Depuis que vous avez quitté les mines de Nashkel ensemble, il ne vous a jamais quitté, sauf une seule et unique fois, période pendant laquelle vous fûtes capturée par Irenicus. Peu avant votre séparation, vous étiez unis par un puissant Lien elfique, ajoute-t-il, un discret sourire illuminant son visage. Mais son visage s'assombrit de nouveau alors qu'il grommelle le nom de votre adversaire, suivi de quelques mots elfiques. Il se détourne ensuite de vous.~
+@46 = ~Cette Lame de Lune est désormais éteinte, ses pouvoirs enfin dissous après des centaines d'années d'utilisation. Ce n'est désormais plus qu'une épée bien aiguisée et bien équilibrée, utilisable par des guerriers de tous niveaux.
+
+PARAMETRES :
+
+TAC0 : +3
+Dégâts : 1D8 +3
+Type de dégâts : tranchant
+Poids : 4
+Facteur de vitesse : 2
+Type de compétence : épée longue
+Type : arme à 1 main
+Non utilisable par :
+ Druide
+ Clerc
+ Mage~
+@47 = ~Souhaitez-vous modifier la classe de Xan ?~
+@48 = ~Modifier la classe de Xan en Guerrier/Mage~
+@49 = ~Modifier la classe de Xan en Mage~
+@50 = ~Modifier la classe de Xan en Sorcier~
+@51 = ~Modifier la classe de Xan en Entropiste (ToB requis)~
+@52 = ~Après la fin de la Guerre des Enfants de Bhaal, Xan parcourut Féerune, réparant les petits torts accidentellement commis par lui ou ses compagnons. Enfin, il finit par revenir à Evereska, mais la ville était déjà assiégée par les phaerimms. Xan combattit vaillamment parmi les rares défenseurs d'Evereska, mais de nombreux amis et membres de sa famille tombèrent à ses côtés. Finalement, il ne resta plus que de jeunes inconnus autour de lui. 
+
+Les phaerimms furent enfin chassés de la vallée, mais la ville était en ruines. Des décennies furent nécessaires à la reconstruction, ne serait-ce que partielle, et le domaine de Xan fut irrémédiablement détruit. Il s'installa dans un logement exigu dans la nouvelle Académie, et l'on raconte qu'il y vit encore, enseignant l'Art aux jeunes elfes, se rendant de temps à autre à Suldanessalar et Eternelle-Rencontre, attendant que sa Lame de Lune l'emmène dans son dernier voyage.~
+@53 = ~Les rumeurs ne s'accordent pas pour dire combien de jours, d'années même, s'écoulèrent avant que <CHARNAME> ne pose le pied sur la terre bénie d'Arvandor. Certains attestèrent qu'elle traversa un portail dans le Trône de Bhaal, devant les yeux ébahis du Solaire, et devant ses compagnons, surpris mais compréhensifs. Certains dirent qu'elle vécut longtemps et confortablement dans les Royaumes ; beaucoup murmurèrent qu'ils l'avaient vue dans Sigil ; d'autres prétendirent qu'elle disparut immédiatement après la fin de la Guerre des Enfants de Bhaal.
+
+Quoi qu'il en soit, tous s'accordent sur un point : le jour vint où Xan et <CHARNAME> se retrouvèrent. Et cette fois-ci, tous, à l'exception des cyniques les plus invétérés, conviennent qu'ils ne se séparèrent plus jamais. Peu de paroles sortent de ce royaume béni pour parvenir jusqu'aux oreilles des mortels, mais il paraît que celles-ci auraient été prononcées : "Ah, te voilà. Il était temps !"~
+@54 = ~Une fois Amélissane vaincue, Xan et <CHARNAME> se volatilisèrent. Voyages, aventures, installation discrète dans un petit village... personne ne savait ce qu'il en était réellement. Les elfes susurraient que Corellon lui-même avait ensommeillé la Lame de Lune, jusqu'au jour où le couple fut entraperçu au temple de Suldanessalar. Ce jour-là, l'étoile que les elfes nomment Luridel, celle que les hommes appellent l'Etoile du Philosophe, jeta une brève lueur aveuglante. Aujourd'hui encore, elle brille de mille feux.
+
+On ne revit jamais Xan et <CHARNAME>, mais les éminents citoyens d'Evereska sourient d'un air entendu lorsque l'on mentionne le couple. De temps à autre, s'ajoute la rumeur de grands exploits, de sorts puissants, d'héros inconnus et parfois même, d'anecdotes, accompagnés parfois de la curieuse phrase : "Eh bien. Peut-être que la vie n'est pas si vaine, après tout."~
+@55 = ~Lorsque vous l'interrogez sur son passé, XAN vous parle, la nostalgie dans la voix, de son pays d'origine, le fief elfique d'Evereska, ainsi que de son rôle en tant que Grismanteau. Ses lèvres esquissent un sourire, phénomène rare sur son visage à l'air revêche, alors qu'il évoque vos aventures et victoires passées. Mais son visage s'assombrit de nouveau, lorsqu'il fait allusion au sort qui pourrait vous être réservé, énumérant les différentes variantes. Puis il hausse les épaules tristement, vous fait un signe de tête et reprend sa place dans la formation.~
+@56 = ~Il semblerait que ToB ne soit pas installe.~
+@57 = ~Taira~
+@58 = ~Selia~
+@59 = ~Rotan~
+@60 = ~Azag~
+@61 = ~Botan~
+@62 = ~Dur~
+@63 = ~Eligor~
+@64 = ~Siene~
+@65 = ~Ezara~
+@66 = ~Nailyn~
+@67 = ~Ruavel~
+@68 = ~Vel~
+@69 = ~Hunrae~
+@70 = ~Ricar~
+@71 = ~Xynolin~
+@72 = ~Clone Gardienne~
+@73 = ~Journal de Xan~
+@74 = ~Pourquoi me tracasser ? Mon premier journal périt entre les mains d'un érudit espiègle de l'Académie, et le sort de chacun de ses successeurs fut bien pire. Mais je dois absolument mettre de l'ordre dans mes pensées, et je ne vois pas de meilleur moyen que celui-ci.
+
+Heureusement, <CHARNAME> ne semble pas être de ceux qui mettent leur nez dans la vie privée de leurs compagnons ; mais ça serait bien ma chance si je me trompais. Cette femme reste, après tout, un mystère : elle est si humaine dans son apparence et dans son comportement que je n'avais pas remarqué, au début, son port elfique ; orpheline, elle n'a probablement jamais fréquenté notre peuple, sans doute jamais vu de communauté elfique. Comment est-ce possible ?
+
+Il faudra que je lui pose la question. Mais pour l'instant, j'ai encore mal à la tête.
+
+***
+
+Elle est imprudente, en plus. Ou prête à tout. Ou encore - plus probablement - suicidaire. Nous avons laissé plus de vingt-trois morts derrière nous, des hommes de Tazok ou des hobgobelins. Et j'en oublie certainement. Heureusement, il n'y a pas eu d'embuscade sur le chemin du retour : fatigués, blessés, harassés, nous aurions sans aucun doute succombé.
+
+Chaque jour, je me fais davantage de souci pour elle, pour être honnête. Je m'étais habitué à voir, dans toutes les terres occupées par les hommes, des panneaux annonçant des primes faramineuses pour la capture de criminels ; plus d'une fois, mes missions m'ont amenées à aider les hommes dans leurs poursuites. Mais voyager avec une femme qui collectionne les affichettes réclamant sa capture, comme si ce n'était que de vulgaires babioles, j'avoue que c'est une expérience nouvelle. Elle semble quand même troublée par cela, ce qui montre qu'elle n'est pas si inconsciente que ça.
+
+Xan, qu'est-ce que tu fais dans ce groupe ?
+
+***
+
+J'ai commencé à m'accoutumer à nos conversations le soir, près du feu. Elle est vive, et a de l'esprit. (Elle est aussi très taquine. On pourrait croire que ses moqueries incessantes finiront par m'exaspérer... mais je reste malgré tout indifférent à ses quolibets). Quel dommage que la fin s'approche : elle périra dans la citadelle du Trône de Fer de Bois-Manteau. Et moi aussi.
+
+J'appréhende de plus en plus mes tours de garde nocturnes. C'est pas que la situation ait empirée - comme si c'était possible ! Non. Mais j'appréhende de rester assis près du feu et de me demander si ce soir encore elle cauchemardera. Si elle se réveillera encore une fois, en sueurs et essoufflée... non, non, Xan, ne pense pas à ça. Oui, elle se réveillera, et elle te dira qu'elle a, encore une fois, mystérieusement acquis un *autre* pouvoir, et tu passeras encore une heure à essayer de la convaincre en vain de ne pas s'en servir. Je crois que je commence à déceler une tendance...
+
+... Je dois faire quelque chose. Alors que j'écrivais, elle a poussé un cri, je me suis précipité à son chevet, et mes robes ont pris feu. Et moi qui croyait que nos ennemis étaient suffisamment nombreux pour que nous n'ayons pas à nous préoccuper d'autres causes potentielles de décès ! Par la Seldarine... nous sommes maudits.
+
+***
+
+Enfin, nous arrivons au coeur du Bois-Manteau. Le Bois est paisible. Ou plutôt, il l'aurait été, si ces Druides de l'Ombre, ces wyvernes, ces ours, ces gardes du Trône de Fer... non, je ne dois pas continuer, sinon j'épuiserai ma réserve de papier. En revanche, <CHARNAME> ne semble pas se laisser perturber par cela ; au contraire, ces jours-ci, elles sourit beaucoup trop pour quelqu'un dans sa situation.
+
+Nous avons partagé une rêverie hier. Elle n'est pas en phase avec ce monde intérieur, mais elle est déterminée et apprend vite. J'ai pris un malin plaisir à me réveiller quelques moments avant elle. Elle avait un doux sourire sur ses lèvres. Et c'est bien sûr à ce moment que je me souvins que j'avais omis de mémoriser mes sorts pour aujourd'hui...
+
+***
+
+<CHARNAME>. Pourquoi dois-je débuter chaque note avec son prénom ? Ou encore avec une description de son sourire, de sa chevelure - non, je n'en suis pas arrivé là, tout de même ? Pas encore, en tout cas. Mais je pense que ça ne tardera pas, surtout si je laisse mes émotions dicter leur loi. Ce serait la catastrophe assurée. Je devrais lui dire le sort qui m'est réservé, celui qui me lie à ma Lame de Lune. Lui dire que je dois accomplir mon devoir envers mon peuple. Elle comprendra, je suis sûr qu'elle comprendra. Mais... pourquoi est-ce que la simple idée de perdre son amitié me fait tressaillir ? Comme si j'étais sur le point de rendre l'âme ?
+
+... Elle m'a écouté, et je n'ai vu que de l'inquiétude et de la sympathie dans ses yeux. Elle comprend - et pourtant, elle ne comprend pas. Que faire ?
+
+***
+
+Nous sommes toujours vivants. Je suis surpris, c'est le moins que l'on puisse dire. Les pièges et les éclairs de Davaeorn m'ont terrorisé, bien que ces deux derniers siècles, je n'ai jamais pensé être un lâche. C'est à cause d'elle, j'en suis sûr. Quand je pense qu'un de ces malotrus pourrait lui faire du mal, la blesser, alors que mes sorts pitoyables sont inutiles face à tout ça... non, coucher cette pensée sur le papier ne m'aide pas beaucoup. Peut-être devrais-je m'isoler un peu, pour réfléchir. La Porte de Baldur est une grande ville, après tout, et il est peu probable que je lui manque.
+
+Elle m'a demandé ce qui n'allait pas, et je lui ai donné une réponse insensible, inhumaine. Comment ai-je pu être aussi cruel ? J'ai une envie irrépressible de lui présenter mes excuses, de la prendre dans mes bras, de... Non. Je mordrai mes lèvres jusqu'au sang si besoin, mais je ne l'aborderai plus.
+
+***
+
+Aujourd'hui fut à la fois le meilleur et le pire jour de ma vie.
+
+Alors que j'écris ces lignes, elle est endormie, pelotonnée près de moi, la tête sur mes genoux. Je n'ai pas l'impression d'avoir remporté une victoire - plutôt d'avoir subi une défaite à grande échelle. Pourquoi m'aimes-tu, ma Dame, pourquoi ?
+
+***
+
+Parfois, je crains que le ciel ne nous tombe sur la tête, nous ensevelissant sous son poids. Ou bien la lune explosera, le soleil s'éteindra, et je me réveillerai, à nouveau prisonnier de Mulahey.
+
+Elle vient de quitter ma chambre, m'annonçant que, dès demain, nous prendrons la route pour Château-Suif. Quelle sensation curieuse de se rendre dans cet endroit où elle vécut jadis, je n'en doute pas, mais je pense que je ne serai pas très attentif. Les reflets de ses cheveux m'intéressent infiniment plus. Ah. Je viens de décrire sa chevelure, n'est-ce pas ? Je suis maudit. Maudit. Pourquoi suis-je en train de sourire alors que j'écris ceci ?
+
+***
+
+Château-Suif. Koveras. Reiltar. Ulraunt. La lettre de Gorion. Les prophéties d'Alaundo. 
+
+Une Enfant de Bhaal.
+
+Ce qui m'étonne le plus c'est le fait que je ne tienne même pas compte de toutes les conséquences liées à cette tare, cette souillure qu'est son essence divine. Sa nature soi-disant maléfique, le chaos et la destruction qu'elle sèmera, ceux qu'elle sera amenée à faire périr, le trône de son père - après que le choc initial se fut dissipé, ces choses n'avaient plus aucune importance. Le plus important, c'est sa perte. Son inéluctable perte. 
+
+Les siècles de séparation que j'imaginais ne sont rien lorsqu'on les compare à l'éternité. Elle va disparaître dans l'année. Plus ou moins. Et après - rien.
+
+Rien.
+
+***
+
+Notre Lien grandit chaque jour. Les battements de son coeur, ses émotions, et même quelques uns de ses souvenirs se glissent lentement mais sûrement dans ma vie. Je retiens mon souffle à chaque fois que j'y pense, tentant vainement de ne pas penser à la fin. Laissons les autres construire leur lien qui perdurera à travers les siècles : ils le méritent. Mais elle... elle mérite davantage. Mon seul regret est que mon coeur ne vaille pas davantage.
+
+Demain nous entrerons dans le Palais Ducal, main dans la main. Elle doit faire face à son frère, et je tâcherai de la protéger de mon mieux. Ce moment viendra trop vite. Je vois ses yeux emplis de questions, et je ne peux pas répondre à une seule d'entre elles, pas tant que son frère sera encore en vie. Oui, je resterai à ses côtés, et oui, je vais devoir me rendre à Evereska - pour en partir une fois que j'aurai démissionné, et je n'y retournerai plus jamais. A quoi bon revenir, sans sa main dans la mienne... A quoi bon ?
+
+Assez. Je dois me reposer, et elle aussi. Demain...
+
+***
+
+Combien de mois se sont écoulés ? Je relis ces pages, et je ne reconnais même pas mon écriture. Dois-je même poursuivre ? Je n'en vois pas l'intérêt, mais je ne peux pas faire grand chose d'autre pour l'instant. Mes robes, les composants nécessaires à mes sorts ont tous disparu, mes jambes me font atrocement souffrir tant ma fatigue est grande - depuis combien de temps suis-je en train d'errer dans les rues d'Athkatla ? Plusieurs heures se sont écoulées avant que je ne me rende à l'évidence : la probabilité que je tombe sur elle lors de mes vagabondages est inexistante - et je ne suis même pas certain qu'elle soit ici. Heureusement que la douleur a cessé, ce qui signifie - ce qui doit signifier ! - qu'elle n'a plus mal. Est-ce qu'elle est saine et sauve ? Est-elle seule ?
+
+A nouveau, le bruit d'une déflagration retentit. Ces hommes... Ils sont incorrigibles. Mais si il existe la moindre chance que cet évènement soit lié à son sort, je me dois d'enquêter. Et je le ferai. Etait-ce... était-ce son visage que je viens tout juste d'apercevoir ?!
+
+***
+
+Ces auberges et leurs chambres se ressemblent toutes, j'en oublie où je suis. Dans Athkatla ? A la Porte de Baldur ? Au Val de Bise ? Mais les cicatrices sur son visage et sur ses bras, bien que s'estompant peu à peu, me rappellent vite à la réalité. Et me rappellent que c'est à cause de moi qu'elle en est arrivée là.
+
+Est-ce qu'il aurait pu en être autrement ? Oui, c'est possible, susurre la petite voix dans ma tête, et cette différence se serait résumée par ma prompte mort aux mains de ce fou furieux, et davantage de souffrances pour elle. Ca semble logique, comme d'habitude. Mais pourquoi alors, est-ce qu'un simple regard dans sa direction me donne l'envie de pleurer de honte ?
+
+Heureusement, elle est en train de se reposer. Elle aura besoin de toutes ses forces - accumuler autant d'or en si peu de temps n'est pas chose facile, et traiter avec les ombres de cette ville sera encore plus exigeant. Par Corellon, elle m'a tant manqué...
+
+***
+
+Je rêvasse de plus en plus souvent. Oui, il y a de la souffrance, et du danger, et nous allons très certainement mourir. Mais pour une raison ou une autre, lorsque je la regarde, j'oublie toutes ces idées noires - enfin, jusqu'à la bataille suivante, bien sûr. Puis je vois l'aisance avec laquelle elle tue, et il m'est difficile de ne pas pousser un cri, de m'efforcer de continuer à jeter mon sort. Est-ce que son essence divine s'emparera d'elle ? Si cela continue ainsi, ça finira bien par arriver, et que feras-tu ce jour-là, Xan ? Oui, tu connais la réponse : rien. Tu es irrévocablement maudit, ce n'est même pas drôle.
+
+On dirait que ça ne la dérange pas. Elle a la tête dans les nuages, comme toujours et elle est si sûre que "tout va bien se passer", c'est déroutant. Mais bien sûr... C'est bien tes blessures que j'ai du soigner hier, <CHARNAME> ? Non ?
+
+***
+
+Dès la première lueur, nous levons l'ancre et mettons le cap sur Spellhold. Un nom de mauvais augure. Est-ce que cela signifie que ma magie ne sera d'aucune utilité là-bas ? J'espère que non : après tout, avec tout les dangers qui l'attendent, je ne veux pas être un fardeau. Dans tous les cas, elle est dans sa rêverie ou bien endormie à présent : quand cette lumière traverse ses paupières, je ne suis jamais sûr de moi. J'aimerais tant la rejoindre, mais je sais que le résultat serait le même : je me réveillerais en sursaut, en sueur, ayant encore une fois rêvé de son corps inanimé, et je ne tiens pas à précipiter ce moment.
+
+Qu'est-ce qui est pire : mourir aux mains d'Irenicus ou mourir noyé parce que ce maudit rafiot aura coulé ? <CHARNAME>, connais-tu la réponse ? Non, non, je connais ta réponse : tu me diras que nous ne sommes pas maudits, que l'espoir persiste... Mais comment-ce possible, alors que notre situation est désespérée ? Parfois, je me dis que je ne la comprendrai jamais.
+
+***
+
+Irenicus a eu la gentillesse de me laisser tout mon équipement. C'est très généreux de sa part, j'en suis sûr, mais il ne m'est d'aucun utilité. Je ressens encore... non, il serait plus correct de dire que je me sens complètement engourdi. Et le pire, c'est que je n'ai aucune idée de l'état dans lequel elle est. Où l'a-t-il emmenée ? Que va-t-il faire ? Est-ce qu'elle survivra ? Restera-t-elle - saine d'esprit ? Imoen est devenue complètement folle, je le sentais bien. Et elle ? Est-ce qu'elle...
+
+... quelle atroce souffrance... est-ce que je la reverrai ?
+
+***
+
+Est-ce que l'Ecorcheur a une queue ? Je sais, c'est ridicule, mais cette interrogation ne cesse de s'immiscer dans mon esprit. Est-ce que lui... ou elle ? Enfin, ça doit forcément être un Ecorcheur femelle, enfin, une Ecorcheuse, puisque... Enfin, ça veut dire que...
+
+Arrête. Xan, tu deviens complètement hystérique. Encore. Et ça n'aide personne, et surtout, ça ne l'aide pas, elle. Non pas que l'on puisse faire quoi que ce soit pour elle. Pour une fois, "maudits" est un euphémisme.
+
+Elle semble si petite, si frêle, si seule dans son couchage. On dirait presque une enfant - si l'on parvient à oublier que cette enfant de deux mètres et demi anéantissait tout sur son passage il y a quelques heures à peine. Mais ce n'est pas vraiment de sa faute, n'est-ce pas ? Et Bodhi n'est plus là, donc il y a peut-être moins de chance de récidive. Et puis, elle a besoin de moi. Elle est sur le point de se réveiller ; je vais me rendre à son chevet. Maudite ou pas, elle est tout ce qui compte à mes yeux.
+
+***
+
+Je lève les yeux, et elle me sourit. Et je suis heureux. Ca me suffit. Peu me suffit.
+
+***
+
+L'Ombre-Terre ! Décidément, nous sommes fous. Certes, nous n'avions pas le choix, et nous n'avons pas plus le choix maintenant, mais tout de même ! S'aventurer dans le domaine des flagelleurs mentaux et des drows, et de son plein gré avec ça ! C'est insensé. Elle ne semble pas dérangée, en revanche : c'est comme si ça lui était complètement égal. Ses yeux sont éteints, et dans le vague... ou peut-être est-ce uniquement mon imagination ?
+
+... non. Je me refuse d'y croire. Et comment avons-nous pu accepter *ça*, en plus ! 
+
+Je n'écrirai plus. Mes mains ne m'appartiennent plus.
+
+***
+
+Quel soulagement d'être à nouveau parmi les siens. Un soulagement qui n'est que passager, malheureusement. Chaque détail dans l'attitude d'Elhan révélait sa méfiance, et elle s'en est bien rendue compte ; elle n'est pas idiote. Un court instant, j'ai bien eu peur que ses sages - qui, il faut le dire, méritaient de subir sa colère - partagent le même sort que les elfes noirs, mais heureusement, nous n'en sommes pas arrivés là. Elle semble agacée, tout de même, et elle n'est pas la seule.
+
+Bientôt, nous serons de retour à Athkatla. L'Ordre du Coeur Radieux nous aidera sans doute - ces abrutis suicidaires n'ont rien de mieux à faire de toute façon. J'ai tellement peur qu'elle décide d'affronter Bodhi seule. L'affaire est devenue très personnelle, et <CHARNAME> sait être très têtue. Mais si belle... maintenant qu'elle est redevenue elle-même...
+
+Je ne pense pas que nous aurons le temps de faire des cauchemars ce soir.
+
+***
+
+Elle m'a demandé de préparer mes meilleurs sorts, et je l'ai fait. Je ne devrais pas gaspiller mon temps à écrire ces quelques lignes : elle m'attend en bas, et le ciel est en train de s'assombrir. J'aurais dû, au minimum, élever ma voix en prière. Mais à quoi bon ?
+
+<CHARNAME>... elle s'en sortira, je vais m'en assurer. Quoi qu'il arrive. Si seulement il pouvait en être de même pour moi. Mais peut-être ne sommes-nous pas maudits, après tout ?~
+@75 = ~Xan prit la route pour Evereska dès que l'Enfant de Bhaal <CHARNAME> refusa d'assumer son héritage. Il participa à la défense de la ville, alors que ses murs croulaient sous les attaques incessantes des phaerimms. Et il y resta jusqu'à ce que la sécurité d'Evereska soit assurée. Puis il enseigna la magie à l'Académie, pendant de nombreuses années, sans jamais quitter la ville. 
+
+Pourtant, une nuit, il disparut. Peu après, le bruit courait dans toute l'Académie qu'il avait été vu en compagnie d'une personne encapuchonnée, sans doute l'un ou l'une de ses compagnons d'antan. Ni Xan ni ce personnage mystérieux ne furent jamais revus. On dit, en revanche, qu'au moment de son départ, Xan semblait plein d'espoir.~
+@76 = ~Cette arme puissante fut créée par les forgerons de l'ancienne Myth Drannor. Les Lames de Lunes sont employées dans le long procédé de sélection du souverain de l'île d'Eternelle-Rencontre. Une Lame de Lune choisit celui qui la porte, et dans le cas de celle-ci, elle a choisi cet elfe, Xan. Seul Xan peut utiliser cette lame, n'importe qui d'autre se trouvera incapable de la soulever. Cette Lame de Lune en particulier accorde une résistance au feu, ainsi qu'un bonus à la classe d'armure. Désormais, elle protège celui qui la porte du silence, et le rend invisible.
+
+PARAMETRES :
+
+Bonus :
+ +1 à la classe d'armure
+ 50 % de résistance au feu
+ Invisibilité
+ Vocaliser
+
+TAC0 : +4
+Dégâts : 1D8 +4
+Type de dégâts : tranchant
+Poids : 4
+Facteur de vitesse : 2
+Type de compétence : épée longue
+Type : arme à 1 main
+Utilisable par :
+ Xan~
+@77 = ~Cette arme puissante fut créée par les forgerons de l'ancienne Myth Drannor. Les Lames de Lunes sont employées dans le long procédé de sélection du souverain de l'île d'Eternelle-Rencontre. Une Lame de Lune choisit celui qui la porte, et dans le cas de celle-ci, elle a choisi cet elfe, Xan. Seul Xan peut utiliser cette lame, n'importe qui d'autre se trouvera incapable de la soulever. Cette Lame de Lune en particulier accorde une résistance au feu, ainsi qu'un bonus à la classe d'armure. Désormais, elle protège celui qui la porte du silence, et lui donne un certain avantage au combat.
+
+PARAMETRES :
+
+Capacité de combat :
+ +1 attaque par round
+
+Bonus :
+ +1 à la classe d'armure
+ 50 % de résistance au feu
+ Vocaliser
+
+TAC0 : +4
+Dégâts : 1D8 +4
+Type de dégâts : tranchant
+Poids : 4
+Facteur de vitesse : 0
+Type de compétence : épée longue
+Type : arme à 1 main
+Utilisable par :
+ Xan~
+@78 = ~Animation "epee enflammee" de BG1~
+@79 = ~Aegnor~
+@80 = ~Hiel~
+@81 = ~Naiz~
+@82 = ~Verella~
+@83 = ~There is a small temple of Ilmater in the northern part of Baldur's Gate, grey and unassuming. A few priests and initiates hold quarters there, among them a slight elf in purple robes. It is rumored the Crying God gave him power only recently, although he wears no visible holy symbol. But he turns none who comes for healing aside, and soon the locals become used to him feeding birds in deep winter, or stargazing on a cloudless night. Strangely, the amount of crime in the city decreases, and some even whisper the elven newcomer helps those in need, if asked.
+
+Yet there is another mystery about the elf: sometimes he disappears for days at a time, and his room is found empty even as the other initiates swear nobody ever sees him leaving it. An old, half-crazed woman wails of witnessing a shadow door standing in the middle of the room, like a portal, and a passing Red Wizard snorts that the locals do not see further than their own noses, but who'd believe a Thayvian conjurer and a street hag? One thing is certain: the strange elf always returns with his eyes shining, and for a long while he remains in an almost cheerful mood.
+
+Time passes, and his disappearances become longer, as the world around grows darker. There is a war raging on among the Planes, rumors go, and one of the new deities is in need of aid. The locals, however, pay little heed to such things, and nobody connects the two events when one starry night, not a tenday after the rumors start, the elf vanishes completely. Nothing much is found among his things, except a single drawing of a woman with a half-smile upon her face, wind in her hair - an image familiar to any who ever set foot in Her temple. But neither She nor Her new Chosen give an answer.~
+@84 = ~On the dawn of the next day, as Xan woke beside <CHARNAME> in faint morning light, he saw in wonder a shimmering figure of Corellon Larethian. The vision drew Xan's moonblade, smiled and sheathed it. They looked at each other, and Xan later said in that moment he understood himself as never before. But he blinked, and the vision was gone. So was the sword - forever.
+
+With <CHARNAME>'s divine essence gone, and Xan's moonblade having followed suit, both had to face change. They took to the familiar sights and new places: walked the sea shore of Candlekeep, broke fresh bread and cheese on the wooden benches of Baldur's Gate, travelled through the ruins of Myth Drannor among the autumn leaves, spent a breathtaking month in a cabin by the lake. Later, they would meet old friends and companions in the familiar confines of the Elfsong, which would become a tradition of sorts. Xan once said he never thought that newfound freedom, too, needed a cure - but in the face of nature and by his love's side, he found it.
+
+An elven life is a long one, and when it comes to adventurers of note, a hundred tomes are not enough to describe half of it, from late-night conversations near the fire to long journeys through spring forests and summer roads. Yet a small scroll is sometimes enough to transcribe the gist of it. For <CHARNAME> and Xan were happy, and despite doom or darkness that hung over the Bhaalspawn's destiny, they came out the victors, alive and very much in love. Much has changed in their lives - and much has stayed the same. For they would always have each other, and no trials or dangers would ever change it.
+
+On the outskirts of Evereska, a quiet villa stands off the road, not far from a sparkling waterfall that puts perfectly cut diamonds to shame. A small brook carries his waters past a marble porch, and a statue of Hanali Celanil in the garden stands in the nude, watching the wild roses grow. Sometimes an elven apprentice passes by and leaves a stack of notes by the door, sure in his knowledge they will be read; or a priest of Corellon comes and puts in a humble request for help, unsure but hopeful it would be followed. But more often, a blue magic portal shines in the night, and then laughter is heard by the pool, and in the garden, Hanali smiles. On such evenings, crickets chirp, pages rustle, and quick steps are heard, before a dinner is laid on the table.  Warm light comes from behind crystal windows, a sure sign that life endures. And love continues.~
+@85 = ~Lame de Lune~
+@86 = ~BG2EE is detected. Flaming swords are already included.~
+@87 = ~Xan's Alternate Voice by Joey Bracken~
+@88 = ~Xan BGII needs to be installed.~

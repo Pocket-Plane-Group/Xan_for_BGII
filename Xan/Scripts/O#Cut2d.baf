@@ -1,0 +1,12 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+SetGlobal("O#XanRicarQuest","GLOBAL",7)
+CreateVisualEffect("spdimndr",[3208.2223])
+Wait(3)
+CreateCreature("O#Clone",[3208.2223],0)
+Wait(2)
+ActionOverride("O#Clone",StartDialogueNoSet(Player1))
+END

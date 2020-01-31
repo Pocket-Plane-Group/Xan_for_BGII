@@ -1,0 +1,50 @@
+@46 = ~Cette Lame de Lune est désormais éteinte, ses pouvoirs enfin dissous après des centaines d'années d'utilisation. Ce n'est désormais plus qu'une épée bien aiguisée et bien équilibrée, utilisable par des guerriers de tous niveaux.
+
+PARAMETRES :
+
+TAC0 : +3
+Dégâts : 1D8 +3
+Type de dégâts : tranchant
+Poids : 4
+Facteur de vitesse : 2
+Type de compétence : épée longue
+Type : arme à 1 main
+~
+@76 = ~Cette arme puissante fut créée par les forgerons de l'ancienne Myth Drannor. Les Lames de Lunes sont employées dans le long procédé de sélection du souverain de l'île d'Eternelle-Rencontre. Une Lame de Lune choisit celui qui la porte, et dans le cas de celle-ci, elle a choisi cet elfe, Xan. Seul Xan peut utiliser cette lame, n'importe qui d'autre se trouvera incapable de la soulever. Cette Lame de Lune en particulier accorde une résistance au feu, ainsi qu'un bonus à la classe d'armure. Désormais, elle protège celui qui la porte du silence, et le rend invisible.
+
+PARAMETRES :
+
+Bonus :
+ +1 à la classe d'armure
+ 50 % de résistance au feu
+ Invisibilité
+ Vocaliser
+
+TAC0 : +4
+Dégâts : 1D8 +4
+Type de dégâts : tranchant
+Poids : 4
+Facteur de vitesse : 2
+Type de compétence : épée longue
+Type : arme à 1 main
+~
+@77 = ~Cette arme puissante fut créée par les forgerons de l'ancienne Myth Drannor. Les Lames de Lunes sont employées dans le long procédé de sélection du souverain de l'île d'Eternelle-Rencontre. Une Lame de Lune choisit celui qui la porte, et dans le cas de celle-ci, elle a choisi cet elfe, Xan. Seul Xan peut utiliser cette lame, n'importe qui d'autre se trouvera incapable de la soulever. Cette Lame de Lune en particulier accorde une résistance au feu, ainsi qu'un bonus à la classe d'armure. Désormais, elle protège celui qui la porte du silence, et lui donne un certain avantage au combat.
+
+PARAMETRES :
+
+Capacité de combat :
+ +1 attaque par round
+
+Bonus :
+ +1 à la classe d'armure
+ 50 % de résistance au feu
+ Vocaliser
+
+TAC0 : +4
+Dégâts : 1D8 +4
+Type de dégâts : tranchant
+Poids : 4
+Facteur de vitesse : 0
+Type de compétence : épée longue
+Type : arme à 1 main
+~

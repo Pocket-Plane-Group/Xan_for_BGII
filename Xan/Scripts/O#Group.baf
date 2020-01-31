@@ -1,0 +1,20 @@
+IF
+AttackedBy([GOODCUTOFF],DEFAULT)
+Allegiance(Myself,NEUTRAL)
+Global("O#XanTalosThiefAttacked","LOCALS",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanTalosThiefAttacked","LOCALS",1)
+SetGlobal("O#XanPCAttackedTalosThieves","GLOBAL",1)
+Enemy()
+END
+
+IF
+Global("O#XanPCAttackedTalosThieves","GLOBAL",1)
+Allegiance(Myself,NEUTRAL)
+Global("O#XanTalosThiefHostile","LOCALS",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanTalosThiefHostile","LOCALS",1)
+Enemy()
+END

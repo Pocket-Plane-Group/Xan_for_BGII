@@ -1,0 +1,124 @@
+// Ascension, not Chosen
+IF
+Global("StartEndBios","AR6200",1)
+InParty("O#Xan")
+Global("PlayerChoseEssence","GLOBAL",1)
+!Global("O#XanBondedPathAlive","GLOBAL",2)
+Global("O#XanBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanBio","GLOBAL",1)
+TextScreen("O#Xan01")
+SmallWait(1)
+Continue()
+END
+
+// Ascension, Chosen
+IF
+Global("StartEndBios","AR6200",1)
+InParty("O#Xan")
+Global("PlayerChoseEssence","GLOBAL",1)
+Global("O#XanBondedPathAlive","GLOBAL",2)
+Global("O#XanBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanBio","GLOBAL",1)
+TextScreen("O#Xan05")
+SmallWait(1)
+Continue()
+END
+
+// Mortal, Xan died at Bodhi's graveyard
+IF
+Global("StartEndBios","AR6200",1)
+Global("PlayerChoseEssence","GLOBAL",0)
+Global("O#XanMoonbladeExtinguished","GLOBAL",3)
+Global("O#XanBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanBio","GLOBAL",1)
+TextScreen("O#Xan02")
+SmallWait(1)
+Continue()
+END
+
+// Mortal, non-romance
+IF
+Global("StartEndBios","AR6200",1)
+InParty("O#Xan")
+Global("PlayerChoseEssence","GLOBAL",0)
+!Global("O#XanRomanceActive","GLOBAL",2)
+!Global("O#XanRomanceFuture","GLOBAL",1)
+Global("O#XanBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanBio","GLOBAL",1)
+TextScreen("O#Xan01")
+SmallWait(1)
+Continue()
+END
+
+// Mortal, non-bonded romance
+IF
+Global("StartEndBios","AR6200",1)
+InParty("O#Xan")
+Global("PlayerChoseEssence","GLOBAL",0)
+Global("O#XanRomanceActive","GLOBAL",2)
+!Global("O#XanBondedPathAlive","GLOBAL",2)
+!Global("RE_ValygarEscape","GLOBAL",1)
+Global("O#XanBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanBio","GLOBAL",1)
+TextScreen("O#Xan03")
+SmallWait(1)
+Continue()
+END
+
+// Mortal, bonded romance
+IF
+Global("StartEndBios","AR6200",1)
+InParty("O#Xan")
+Global("PlayerChoseEssence","GLOBAL",0)
+Global("O#XanRomanceActive","GLOBAL",2)
+Global("O#XanBondedPathAlive","GLOBAL",2)
+!Global("RE_ValygarEscape","GLOBAL",1)
+Global("O#XanBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanBio","GLOBAL",1)
+TextScreen("O#Xan06")
+SmallWait(1)
+Continue()
+END
+
+// Mortal, romanced but escaped with Valygar
+IF
+Global("StartEndBios","AR6200",1)
+InParty("O#Xan")
+Global("PlayerChoseEssence","GLOBAL",0)
+Global("O#XanRomanceActive","GLOBAL",2)
+Global("RE_ValygarEscape","GLOBAL",1)
+Global("O#XanBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanBio","GLOBAL",1)
+TextScreen("O#Xan04")
+SmallWait(1)
+Continue()
+END
+
+// Mortal, future romance
+IF
+Global("StartEndBios","AR6200",1)
+InParty("O#Xan")
+Global("PlayerChoseEssence","GLOBAL",0)
+Global("O#XanRomanceFuture","GLOBAL",1)
+Global("O#XanBio","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanBio","GLOBAL",1)
+TextScreen("O#Xan04")
+SmallWait(1)
+Continue()
+END

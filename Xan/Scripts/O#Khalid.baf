@@ -1,0 +1,36 @@
+IF
+Global("O#XanFailsCharmSlavers","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("O#XanFailsCharmSlavers","GLOBAL",2)
+StartDialogueNoSet(Player1)
+END
+
+IF
+Global("O#XanSieneAppeared","GLOBAL",7)
+Global("O#XanSlaversLeftAlone","GLOBAL",0)
+!See("O#Merc")
+THEN
+RESPONSE #100
+SetGlobal("O#XanSlaversLeftAlone","GLOBAL",1)
+StartDialogueNoSet(Player1)
+END
+
+IF
+Global("O#XanToBFirstPartDone","GLOBAL",5)
+Global("O#XanKhalidPCAgain","LOCALS",0)
+OR(6)
+Range(Player1,25)
+Range(Player2,25)
+Range(Player3,25)
+Range(Player4,25)
+Range(Player5,25)
+Range(Player6,25)
+InMyArea(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+SetGlobal("O#XanKhalidPCAgain","LOCALS",1)
+StartDialogueNoSet(Player1)
+END

@@ -1,0 +1,18 @@
+IF
+Global("O#XanRicarQuest","GLOBAL",10)
+Global("ElvenCityTree","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanRicarQuest","GLOBAL",11)
+CreateCreature("O#DrowF",[300.300],0)
+END
+
+IF
+Global("O#XanRicarQuest","GLOBAL",11)
+GlobalGT("ElvenCityTree","GLOBAL",0)
+Global("O#XanHunraeDeleted","AR1800",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanHunraeDeleted","AR1800",1)
+ActionOverride("O#DrowF",DestroySelf())
+END

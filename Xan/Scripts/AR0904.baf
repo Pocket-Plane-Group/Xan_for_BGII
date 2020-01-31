@@ -1,0 +1,9 @@
+IF
+GlobalGT("O#XanTairaAsks","GLOBAL",0)
+Global("O#XanRotanSpawned","AR0904",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanRotanSpawned","AR0904",1)
+CreateCreature("O#Rotan",[210.280],0)
+Continue()
+END

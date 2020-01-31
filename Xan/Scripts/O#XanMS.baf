@@ -1,0 +1,14 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+Wait(1)
+CreateVisualEffectObject("SPSTRENH","O#Xan")
+ActionOverride("O#Xan",TakePartyItem("O#XanMS"))
+ActionOverride("O#Xan",DestroyItem("O#XanMS"))
+ActionOverride("O#Xan",GiveItemCreate("O#XanIMS","O#Xan",0,0,0))
+ActionOverride("O#Xan",PlayDead(60))
+Wait(1)
+ActionOverride("O#Xan",StartDialogueNoSet(Player1))
+END

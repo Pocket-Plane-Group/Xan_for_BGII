@@ -1,0 +1,20 @@
+IF
+AttackedBy([GOODCUTOFF],DEFAULT)
+Allegiance(Myself,NEUTRAL)
+Global("O#XanAmkethSlaverAttacked","LOCALS",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanAmkethSlaverAttacked","LOCALS",1)
+SetGlobal("O#XanPCAttackedAmkethSlavers","GLOBAL",1)
+Enemy()
+END
+
+IF
+Global("O#XanPCAttackedAmkethSlavers","GLOBAL",1)
+Allegiance(Myself,NEUTRAL)
+Global("O#XanAmkethSlaverHostile","LOCALS",0)
+THEN
+RESPONSE #100
+SetGlobal("O#XanAmkethSlaverHostile","LOCALS",1)
+Enemy()
+END

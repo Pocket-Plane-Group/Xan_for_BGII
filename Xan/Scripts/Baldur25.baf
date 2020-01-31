@@ -1,0 +1,18 @@
+IF
+Global("O#XanDreamTalk0","GLOBAL",0)
+Global("O#XanMoonbladeExtinguished","GLOBAL",3)
+THEN
+RESPONSE #100
+SetGlobal("O#XanDreamTalk0","GLOBAL",1)
+SetGlobalTimer("O#XanDream1TT","GLOBAL",ONE_DAY)
+END
+
+IF
+Global("O#XanexchangedTransported","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("O#XanexchangedTransported","GLOBAL",2)
+MoveGlobal("AR5506","O#Xan",[300.200])
+ActionOverride("O#Xan",PlayDead(30))
+ActionOverride("O#Xan",StartDialogueNoSet(Player1))
+END

@@ -1,5 +1,5 @@
 			Xan NPC MOD for Baldur's Gate II
-				   Version 18
+				   Version 19
 			  A Pocket Plane Group Project
 			   http://www.pocketplane.net
 
@@ -486,6 +486,9 @@ winLAME					http://winlame.sourceforge.net
 -------------------
 6. Version History
 -------------------
+
+Version 19 4th August 2020
+-fixed alternative soundset: sound clips should match written text
 
 Version 18 31st January 2020
 -updated .ini with the GitHub address for download
